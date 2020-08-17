@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SpaceshipDemo",
+			"Path": "D:\\Unreal Projects\\SpaceshipDemo\\Source\\SpaceshipDemo.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SpaceshipDemoEditor",
+			"Path": "D:\\Unreal Projects\\SpaceshipDemo\\Source\\SpaceshipDemoEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

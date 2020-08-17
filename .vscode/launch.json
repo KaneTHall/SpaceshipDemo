@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "SpaceshipDemo (Debug)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemo Win64 Debug Build",
+			"program": "D:\\Unreal Projects\\SpaceshipDemo\\Binaries\\Win64\\UE4-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SpaceshipDemo (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemo Win64 DebugGame Build",
+			"program": "D:\\Unreal Projects\\SpaceshipDemo\\Binaries\\Win64\\UE4-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SpaceshipDemo (Development)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemo Win64 Development Build",
+			"program": "D:\\Unreal Projects\\SpaceshipDemo\\Binaries\\Win64\\UE4.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SpaceshipDemo (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemo Win64 Shipping Build",
+			"program": "D:\\Unreal Projects\\SpaceshipDemo\\Binaries\\Win64\\UE4-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SpaceshipDemo (Test)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemo Win64 Test Build",
+			"program": "D:\\Unreal Projects\\SpaceshipDemo\\Binaries\\Win64\\UE4-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SpaceshipDemoEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemoEditor Win64 Debug Build",
+			"program": "D:\\UE_4.25\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"D:\\Unreal Projects\\SpaceshipDemo\\SpaceshipDemo.uproject"
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SpaceshipDemoEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemoEditor Win64 DebugGame Build",
+			"program": "D:\\UE_4.25\\Engine\\Binaries\\Win64\\UE4Editor-Win64-DebugGame.exe",
+			"args": [
+				"D:\\Unreal Projects\\SpaceshipDemo\\SpaceshipDemo.uproject"
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "SpaceshipDemoEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "SpaceshipDemoEditor Win64 Development Build",
+			"program": "D:\\UE_4.25\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"D:\\Unreal Projects\\SpaceshipDemo\\SpaceshipDemo.uproject"
+			],
+			"cwd": "D:\\UE_4.25",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.25\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "D:\\UE_4.25\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"D:\\Unreal Projects\\SpaceshipDemo\\SpaceshipDemo.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "D:\\UE_4.25"
+		}
+	]
+}

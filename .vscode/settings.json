@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"D:/Unreal Projects/SpaceshipDemo/.vscode": true,
+		"D:/Unreal Projects/SpaceshipDemo/Content": true,
+		"D:/Unreal Projects/SpaceshipDemo/Intermediate": true
+	}
+}

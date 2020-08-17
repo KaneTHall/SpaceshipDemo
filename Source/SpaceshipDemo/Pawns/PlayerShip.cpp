@@ -27,7 +27,7 @@ void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputCo
     PlayerInputComponent->BindAxis("Strafe", this, &APlayerShip::Strafe);
     PlayerInputComponent->BindAxis("RotateX",this, &APlayerShip::RotateX);
     PlayerInputComponent->BindAxis("RotateY",this, &APlayerShip::RotateY);
-    PlayerInputComponent->BindAxis("BarrelRoll",this, &APlayerShip::BarrelRoll);
+    PlayerInputComponent->BindAction("BarrelRoll",IE_Pressed,this, &APlayerShip::BarrelRoll);
 }
 
 void APlayerShip::BeginPlay() 
@@ -76,12 +76,18 @@ void APlayerShip::RotateY(float Value)
         OutOfBoundsRotator = FRotator(45,0,0);
         SetCurrentRotation(OutOfBoundsRotator);
     }
-        UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Pitch);
+        //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Pitch);
 }
 
-void APlayerShip::BarrelRoll(float Value) 
+void APlayerShip::BarrelRoll() 
 {
-
+    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
+    BarrelRotation = FRotator(0,BarrelRotateBy,0);
+    AddActorLocalRotation(BarrelRotation,true);
+    if(BarrelRotation.Roll<360)
+    {
+        BarrelRoll();
+    }
     
 }
 

@@ -21,17 +21,17 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* SpringArmComp;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* PlayerCam;
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float MoveSpeed = 500.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float Acceleration = 50.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float RotationSpeed = 100.0f;
-	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float BarrelRollSpeed =50.0f;
+
 	FVector MoveDirection;	
 	FRotator RotationX;
 	FQuat RotateDirectionX;
@@ -39,12 +39,13 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	FQuat RotateDirectionY;
 	FRotator Tilt;
 	FRotator OutOfBoundsRotator;
+	FRotator BarrelRotation;
 
 	void Move(float Value);
 	void RotateX(float Value);
 	void RotateY(float Value);
 	void Strafe(float Value);
-	void BarrelRoll(float Value);
+	void BarrelRoll();
 	void Boost();
 	
 

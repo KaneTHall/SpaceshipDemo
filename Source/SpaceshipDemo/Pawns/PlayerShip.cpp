@@ -84,7 +84,7 @@ void APlayerShip::BarrelRoll()
     
     float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
     BarrelRotation = FRotator(0,0,BarrelRotateBy);
-    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRoll, FireRate,true);
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRoll, RotationSpeed,true);
     AddActorLocalRotation(BarrelRotation,true);
     UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
     RoleTime++;

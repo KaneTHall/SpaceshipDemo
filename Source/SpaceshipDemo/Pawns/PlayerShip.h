@@ -50,7 +50,7 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	void Boost();
 
 	FTimerHandle TimerHandle;
-	float FireRate = 0.01f;
+	float RotationSpeed = 0.01f;
 	float RoleTime = 0;
 
 	public:

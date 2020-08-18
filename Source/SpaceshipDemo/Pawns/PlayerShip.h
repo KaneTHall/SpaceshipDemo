@@ -30,7 +30,7 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float RotationSpeed = 100.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-	float BarrelRollSpeed =50.0f;
+	float BarrelRollSpeed =1000.0f;
 
 	FVector MoveDirection;	
 	FRotator RotationX;
@@ -40,14 +40,18 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	FRotator Tilt;
 	FRotator OutOfBoundsRotator;
 	FRotator BarrelRotation;
-
+	FRotator InitialRotation = FRotator(0,0,0);
+	
 	void Move(float Value);
 	void RotateX(float Value);
 	void RotateY(float Value);
 	void Strafe(float Value);
 	void BarrelRoll();
 	void Boost();
-	
+
+	FTimerHandle TimerHandle;
+	float FireRate = 0.01f;
+	float RoleTime = 0;
 
 	public:
 

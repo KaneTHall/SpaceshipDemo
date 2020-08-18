@@ -81,14 +81,19 @@ void APlayerShip::RotateY(float Value)
 
 void APlayerShip::BarrelRoll() 
 {
-    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
-    BarrelRotation = FRotator(0,BarrelRotateBy,0);
-    AddActorLocalRotation(BarrelRotation,true);
-    if(BarrelRotation.Roll<360)
-    {
-        BarrelRoll();
-    }
     
+    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
+    BarrelRotation = FRotator(0,0,BarrelRotateBy);
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRoll, FireRate,true);
+    AddActorLocalRotation(BarrelRotation,true);
+    UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
+    RoleTime++;
+    if(RoleTime>42)
+    {
+        GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+        SetCurrentRotation(InitialRotation);
+        RoleTime=0;
+    }
 }
 
 void APlayerShip::Boost() 

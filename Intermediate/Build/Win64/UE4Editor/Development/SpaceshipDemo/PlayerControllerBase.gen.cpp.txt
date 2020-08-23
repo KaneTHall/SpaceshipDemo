@@ -1,0 +1,5 @@
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Definitions.SpaceshipDemo.h
+D:\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+D:\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/PlayerControllers/PlayerControllerBase.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\PlayerControllerBase.generated.h

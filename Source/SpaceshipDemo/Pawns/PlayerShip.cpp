@@ -8,6 +8,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "Kismet/GameplayStatics.h"
+
 APlayerShip::APlayerShip()
 {
     SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("Ship Spring Arm Component"));
@@ -16,28 +17,35 @@ APlayerShip::APlayerShip()
     PlayerCam->SetupAttachment(SpringArmComp);
 }
 
-void APlayerShip::Tick(float DeltaTime) 
-{
-    
-}
-
 void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) 
 {
     PlayerInputComponent->BindAxis("Move", this, &APlayerShip::Move);
     PlayerInputComponent->BindAxis("Strafe", this, &APlayerShip::Strafe);
     PlayerInputComponent->BindAxis("RotateX",this, &APlayerShip::RotateX);
     PlayerInputComponent->BindAxis("RotateY",this, &APlayerShip::RotateY);
-    PlayerInputComponent->BindAction("BarrelRoll",IE_Pressed,this, &APlayerShip::BarrelRoll);
+    PlayerInputComponent->BindAction("BarrelRollRight",IE_Pressed,this, &APlayerShip::BarrelRollRight);
+    PlayerInputComponent->BindAction("BarrelRollLeft",IE_Pressed,this, &APlayerShip::BarrelRollLeft);
 }
 
 void APlayerShip::BeginPlay() 
 {
-    
+    PtrPlayerController = Cast<APlayerController>(GetController());
+}
+
+void APlayerShip::Tick(float DeltaTime) 
+{
+    if(PtrPlayerController)
+	{
+		FHitResult TraceHitResult;
+		PtrPlayerController->GetHitResultUnderCursor(ECC_Visibility, false,TraceHitResult);
+		FVector HitLocation = TraceHitResult.ImpactPoint;
+
+	}
 }
 
 void APlayerShip::Move(float Value) 
 {
-    MoveDirection = FVector(Value*MoveSpeed*GetWorld()->DeltaTimeSeconds,0,0);
+    MoveDirection = FVector(0,0,Value*MoveSpeed*GetWorld()->DeltaTimeSeconds);
     AddActorLocalOffset(MoveDirection,true);
 }
 
@@ -45,7 +53,17 @@ void APlayerShip::Strafe(float Value)
 {
     MoveDirection = FVector(0,Value*MoveSpeed*GetWorld()->DeltaTimeSeconds,0);
     AddActorLocalOffset(MoveDirection,true);
-  
+    if(Value == -1 && GetCurrentRotation().Roll>=-15)
+    {
+    
+       // Tilt = FRotator(0,0,-1);
+    }
+    if(Value == 1 && GetCurrentRotation().Roll<=15)
+    {
+     
+        //Tilt = FRotator(0,0,1);     
+    }
+        AddActorLocalRotation(Tilt,true);
 }
 
 void APlayerShip::RotateX(float Value) 
@@ -73,26 +91,44 @@ void APlayerShip::RotateY(float Value)
     }
     else if(GetCurrentRotation().Pitch>45)
     {
-        OutOfBoundsRotator = FRotator(45,0,0);
+        OutOfBoundsRotator = FRotator(45,0,0); 
         SetCurrentRotation(OutOfBoundsRotator);
     }
-        //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Pitch);
+     InitialRotation = GetCurrentRotation();
+     //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
 }
 
-void APlayerShip::BarrelRoll() 
+void APlayerShip::BarrelRollRight() 
 {
     
     float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
     BarrelRotation = FRotator(0,0,BarrelRotateBy);
-    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRoll, RotationSpeed,true);
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRollRight, RollRate,true);
     AddActorLocalRotation(BarrelRotation,true);
     UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
-    RoleTime++;
-    if(RoleTime>42)
+    RollTime++;
+    if(RollTime>RollMaxTime)
     {
         GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
-        SetCurrentRotation(InitialRotation);
-        RoleTime=0;
+        SetCurrentRotation(FRotator(0,0,0));
+        RollTime=0;
+    }
+}
+
+void APlayerShip::BarrelRollLeft() 
+{
+    
+    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
+    BarrelRotation = FRotator(0,0,BarrelRotateBy);
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRollLeft, RollRate,true);
+    AddActorLocalRotation(BarrelRotation*-1,true);
+    UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
+    RollTime++;
+    if(RollTime>RollMaxTime)
+    {
+        GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+        SetCurrentRotation(FRotator(0,0,0));
+        RollTime=0;
     }
 }
 

@@ -46,12 +46,16 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	void RotateX(float Value);
 	void RotateY(float Value);
 	void Strafe(float Value);
-	void BarrelRoll();
+	void BarrelRollRight();
+	void BarrelRollLeft();
 	void Boost();
 
 	FTimerHandle TimerHandle;
-	float RotationSpeed = 0.01f;
-	float RoleTime = 0;
+	float RollRate = 0.01f;
+	float RollTime = 0;
+	float RollMaxTime = 45;
+
+	APlayerController* PtrPlayerController;
 
 	public:
 

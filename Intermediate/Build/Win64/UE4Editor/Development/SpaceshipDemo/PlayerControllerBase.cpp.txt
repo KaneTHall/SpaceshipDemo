@@ -1,0 +1,3 @@
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Definitions.SpaceshipDemo.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\PlayerControllers\PlayerControllerBase.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\PlayerControllerBase.generated.h

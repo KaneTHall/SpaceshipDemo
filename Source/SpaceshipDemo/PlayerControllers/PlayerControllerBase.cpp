@@ -2,7 +2,7 @@
 
 
 #include "PlayerControllerBase.h"
-
+#include "Blueprint/UserWidget.h"
 
 void APlayerControllerBase::SetPlayerEnabledState(bool SetPlayerEnabled) 
 {
@@ -16,4 +16,15 @@ void APlayerControllerBase::SetPlayerEnabledState(bool SetPlayerEnabled)
     }
     
     bShowMouseCursor = SetPlayerEnabled;
+}
+
+void APlayerControllerBase::BeginPlay() 
+{
+    Super::BeginPlay();
+    HUD = CreateWidget(this, HUDClass);
+    if(HUD!=nullptr)
+	{
+		HUD->AddToPlayerScreen();
+	}
+
 }

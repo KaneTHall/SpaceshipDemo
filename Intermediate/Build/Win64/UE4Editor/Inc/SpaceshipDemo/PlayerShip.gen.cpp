@@ -157,7 +157,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerShip, 3574730952);
+	IMPLEMENT_CLASS(APlayerShip, 2159755592);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<APlayerShip>()
 	{
 		return APlayerShip::StaticClass();

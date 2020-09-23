@@ -25,6 +25,12 @@ void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputCo
     PlayerInputComponent->BindAxis("RotateY",this, &APlayerShip::RotateY);
     PlayerInputComponent->BindAction("BarrelRollRight",IE_Pressed,this, &APlayerShip::BarrelRollRight);
     PlayerInputComponent->BindAction("BarrelRollLeft",IE_Pressed,this, &APlayerShip::BarrelRollLeft);
+    PlayerInputComponent->BindAction("Shoot",IE_Pressed,this, &APlayerShip::Shoot);
+}
+
+void APlayerShip::Shoot() 
+{
+    Super::Shoot();
 }
 
 void APlayerShip::BeginPlay() 

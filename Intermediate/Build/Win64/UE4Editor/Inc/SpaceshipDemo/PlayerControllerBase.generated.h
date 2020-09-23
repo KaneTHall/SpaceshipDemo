@@ -60,7 +60,11 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerControllerBase); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerControllerBase)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_PlayerControllers_PlayerControllerBase_h_15_PRIVATE_PROPERTY_OFFSET
+#define SpaceshipDemo_Source_SpaceshipDemo_PlayerControllers_PlayerControllerBase_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__HUDClass() { return STRUCT_OFFSET(APlayerControllerBase, HUDClass); } \
+	FORCEINLINE static uint32 __PPO__HUD() { return STRUCT_OFFSET(APlayerControllerBase, HUD); }
+
+
 #define SpaceshipDemo_Source_SpaceshipDemo_PlayerControllers_PlayerControllerBase_h_12_PROLOG
 #define SpaceshipDemo_Source_SpaceshipDemo_PlayerControllers_PlayerControllerBase_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

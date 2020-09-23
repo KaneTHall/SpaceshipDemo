@@ -7,6 +7,7 @@
 #include "BaseBeam.generated.h"
 
 class UProjectileMovementComponent;
+class USphereComponent;
 
 UCLASS()
 class SPACESHIPDEMO_API ABaseBeam : public AActor
@@ -14,17 +15,23 @@ class SPACESHIPDEMO_API ABaseBeam : public AActor
 	GENERATED_BODY()
 
 private:
+
+
 UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 UProjectileMovementComponent* BeamMovement;
 UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+USphereComponent* SphereComp;
+UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 UStaticMeshComponent* BeamMesh;
-
-
-float MovementSpeed = 1300;
-
+UPROPERTY(EditDefaultsOnly, Category = "Damage")
+TSubclassOf<UDamageType> DamageType;
+UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage", meta = (AllowPrivateAccess = "true"))
+float Damage = 10;
+float MovementSpeed = 1000;
 
 UFUNCTION()
 void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -33,7 +40,5 @@ protected:
 public:	
 	// Sets default values for this actor's properties
 	ABaseBeam();
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 };

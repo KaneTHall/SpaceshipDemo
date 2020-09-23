@@ -1,0 +1,28 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-SpaceshipDemo-0220.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\SpaceshipDemoEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\BaseBeam.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Health.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Asteroid.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\BaseShip.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\PlayerShip.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\PlayerControllerBase.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\SpaceshipDemo.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\SpaceshipDemoGameModeBase.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Asteroid.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\BaseBeam.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\BaseShip.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Health.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\PlayerControllerBase.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\PlayerShip.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\SpaceshipDemo.init.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\SpaceshipDemoGameModeBase.gen.cpp.obj"
+"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Default.rc2.res"
+/OUT:"D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\UE4Editor-SpaceshipDemo-0220.lib"
+/INCLUDE:IMPLEMENT_MODULE_SpaceshipDemo

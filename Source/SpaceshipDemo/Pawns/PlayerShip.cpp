@@ -8,9 +8,12 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "Kismet/GameplayStatics.h"
+#include "SpaceshipDemo/Actors/BaseBeam.h"
+#include "SpaceshipDemo/PlayerControllers/PlayerControllerBase.h"
 
 APlayerShip::APlayerShip()
 {
+    PrimaryActorTick.bCanEverTick = true;
     SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("Ship Spring Arm Component"));
     SpringArmComp->SetupAttachment(RootComponent);
     PlayerCam = CreateDefaultSubobject<UCameraComponent>(TEXT("Player Camera Component"));
@@ -31,22 +34,54 @@ void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputCo
 void APlayerShip::Shoot() 
 {
     Super::Shoot();
+    if(BeamClass)
+	{
+		ProjectileSpawnPoint = ShootPoint->GetComponentLocation();
+		FVector MPosition, MDirection;
+		APlayerControllerBase* PlayerController = (APlayerControllerBase*)GetWorld()->GetFirstPlayerController();
+		PlayerController->DeprojectMousePositionToWorld(MPosition,MDirection);
+		//UE_LOG(LogTemp,Warning, TEXT("X Position: %f & Y Position: %f"),MPosition.X,MPosition.Y);
+		FVector BeamDirection = FVector(ProjectileSpawnPoint.X+100, MPosition.Y, MPosition.Z);
+		//DrawDebugLine(GetWorld(),ProjectileSpawnPointOne, BeamDirection,FColor(255,0,0,1),true ,5.f);
+		ABaseBeam* Beam = GetWorld()->SpawnActor<ABaseBeam>(BeamClass,ProjectileSpawnPoint,MDirection.Rotation());
+		Beam->SetOwner(this);
+	}
 }
 
 void APlayerShip::BeginPlay() 
 {
-    PtrPlayerController = Cast<APlayerController>(GetController());
+    Super::BeginPlay();
 }
 
 void APlayerShip::Tick(float DeltaTime) 
 {
-    if(PtrPlayerController)
-	{
-		FHitResult TraceHitResult;
-		PtrPlayerController->GetHitResultUnderCursor(ECC_Visibility, false,TraceHitResult);
-		FVector HitLocation = TraceHitResult.ImpactPoint;
+    CruiseVector = FVector(CruiseSpeed*DeltaTime,0,0);
+    AddActorLocalOffset(CruiseVector,true);
 
-	}
+    if(bTakenDamage == true)
+    {
+        DamagedTimer+=DeltaTime;
+        DamagedActorHiddenTime+=DeltaTime*10;
+        int DamageFlicker = DamagedActorHiddenTime+=DeltaTime*10;
+        if(DamageFlicker%5==0)
+        {
+            this->SetActorHiddenInGame(true);
+        }
+        else
+        {
+            this->SetActorHiddenInGame(false);
+        }
+        
+
+        if(DamagedTimer>=DamagedTimerLength)
+        {
+            bTakenDamage=false;
+            DamagedTimer=0;
+            DamagedActorHiddenTime = 0;
+            this->SetActorHiddenInGame(false);
+        }
+    }
+    
 }
 
 void APlayerShip::Move(float Value) 
@@ -111,7 +146,7 @@ void APlayerShip::BarrelRollRight()
     BarrelRotation = FRotator(0,0,BarrelRotateBy);
     GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRollRight, RollRate,true);
     AddActorLocalRotation(BarrelRotation,true);
-    UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
+    //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
     RollTime++;
     if(RollTime>RollMaxTime)
     {

@@ -12,7 +12,7 @@
 
 class USpringArmComponent;
 class UCameraComponent;
-
+class ABaseBeam;
 UCLASS()
 class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 {
@@ -41,7 +41,21 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	FRotator OutOfBoundsRotator;
 	FRotator BarrelRotation;
 	FRotator InitialRotation = FRotator(0,0,0);
-	
+	FVector ProjectileSpawnPointOne;
+	FVector ProjectileSpawnPointTwo;
+	FRotator ProjectileSpawnRotation;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Beam Properties", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<ABaseBeam> BeamClass;
+	FVector CruiseVector;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float CruiseSpeed = 50;
+
+	// float variable to hold time taken since damaged
+	float DamagedTimer = 0;
+	// float variable to hold time it takes before player can be damaged again
+	float DamagedTimerLength = 1.5f;
+	//float variable to hold time taken since last hidden appearance 
+	float DamagedActorHiddenTime = 0;
 	void Move(float Value);
 	void RotateX(float Value);
 	void RotateY(float Value);
@@ -50,6 +64,7 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	void BarrelRollLeft();
 	void Boost();
 
+	
 	FTimerHandle TimerHandle;
 	float RollRate = 0.01f;
 	float RollTime = 0;
@@ -57,6 +72,7 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 
 	APlayerController* PtrPlayerController;
 
+	
 	public:
 	//Constructor
 	APlayerShip();

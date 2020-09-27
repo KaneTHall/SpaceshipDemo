@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemo_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x5A005B47,
+				0x4E59CDCD,
 				0x58CE9737,
 				METADATA_PARAMS(nullptr, 0)
 			};

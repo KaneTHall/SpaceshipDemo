@@ -21,21 +21,15 @@ private:
 	UCapsuleComponent* CapComp;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* ShipMesh;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	USceneComponent* ShootPointOne;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	USceneComponent* ShootPointTwo;
 	//Variables
-	FVector ProjectileSpawnPointOne;
-	FVector ProjectileSpawnPointTwo;
 	FRotator ProjectileSpawnRotation;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Beam Properties", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<ABaseBeam> BeamClass;
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))	
 	UHealth* Health;
-
-
+	UFUNCTION()
+	void Crashed(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+	TSubclassOf<UDamageType> DamageType;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage", meta = (AllowPrivateAccess = "true"))
+	float Damage = 10;
 public:
 	// Sets default values for this pawn's properties
 	ABaseShip();
@@ -47,10 +41,15 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	FRotator GetCurrentRotation();
-	FVector GetCurrentLocation();
 	void SetCurrentRotation(FRotator Rotation);
 	void SetCurrentLocation(FVector Location);
-
+	
+	FRotator GetCurrentRotation();
+	FVector GetCurrentLocation();
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	USceneComponent* ShootPoint;
+	FVector ProjectileSpawnPoint;
+	bool bTakenDamage = false; 
+	 
 
 };

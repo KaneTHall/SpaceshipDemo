@@ -8,14 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FVector;
+struct FHitResult;
 #ifdef SPACESHIPDEMO_BaseShip_generated_h
 #error "BaseShip.generated.h already included, missing '#pragma once' in BaseShip.h"
 #endif
 #define SPACESHIPDEMO_BaseShip_generated_h
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_RPC_WRAPPERS
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execCrashed);
+
+
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execCrashed);
+
+
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseShip(); \
@@ -61,10 +73,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABaseShip); \
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CapComp() { return STRUCT_OFFSET(ABaseShip, CapComp); } \
 	FORCEINLINE static uint32 __PPO__ShipMesh() { return STRUCT_OFFSET(ABaseShip, ShipMesh); } \
-	FORCEINLINE static uint32 __PPO__ShootPointOne() { return STRUCT_OFFSET(ABaseShip, ShootPointOne); } \
-	FORCEINLINE static uint32 __PPO__ShootPointTwo() { return STRUCT_OFFSET(ABaseShip, ShootPointTwo); } \
-	FORCEINLINE static uint32 __PPO__BeamClass() { return STRUCT_OFFSET(ABaseShip, BeamClass); } \
-	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ABaseShip, Health); }
+	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ABaseShip, Health); } \
+	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ABaseShip, Damage); } \
+	FORCEINLINE static uint32 __PPO__ShootPoint() { return STRUCT_OFFSET(ABaseShip, ShootPoint); }
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_13_PROLOG

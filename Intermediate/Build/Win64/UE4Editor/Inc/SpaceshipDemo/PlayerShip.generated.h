@@ -64,7 +64,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerShip); \
 	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(APlayerShip, MoveSpeed); } \
 	FORCEINLINE static uint32 __PPO__Acceleration() { return STRUCT_OFFSET(APlayerShip, Acceleration); } \
 	FORCEINLINE static uint32 __PPO__RotationSpeed() { return STRUCT_OFFSET(APlayerShip, RotationSpeed); } \
-	FORCEINLINE static uint32 __PPO__BarrelRollSpeed() { return STRUCT_OFFSET(APlayerShip, BarrelRollSpeed); }
+	FORCEINLINE static uint32 __PPO__BarrelRollSpeed() { return STRUCT_OFFSET(APlayerShip, BarrelRollSpeed); } \
+	FORCEINLINE static uint32 __PPO__BeamClass() { return STRUCT_OFFSET(APlayerShip, BeamClass); } \
+	FORCEINLINE static uint32 __PPO__CruiseSpeed() { return STRUCT_OFFSET(APlayerShip, CruiseSpeed); }
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_16_PROLOG

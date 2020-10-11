@@ -1,7 +1,12 @@
-D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Actors\BaseBeam.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\BTServiceAndTask\BTService_UpdatePlayerLocation.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\BTServiceAndTask\BTService_UpdateWayPoint.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\BTServiceAndTask\BTTask_Shoot.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Components\Health.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\Asteroid.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\EnemyShip.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\BaseShip.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\PlayerControllers\AIPlayerController.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\PlayerControllers\PlayerControllerBase.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\SpaceshipDemoGameModeBase.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\PlayerShip.h
-D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\PlayerControllers\PlayerControllerBase.h
-D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Components\Health.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Actors\BaseBeam.h

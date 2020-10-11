@@ -75,7 +75,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABaseShip); \
 	FORCEINLINE static uint32 __PPO__ShipMesh() { return STRUCT_OFFSET(ABaseShip, ShipMesh); } \
 	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ABaseShip, Health); } \
 	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ABaseShip, Damage); } \
-	FORCEINLINE static uint32 __PPO__ShootPoint() { return STRUCT_OFFSET(ABaseShip, ShootPoint); }
+	FORCEINLINE static uint32 __PPO__ShootSound() { return STRUCT_OFFSET(ABaseShip, ShootSound); } \
+	FORCEINLINE static uint32 __PPO__ShootPoint() { return STRUCT_OFFSET(ABaseShip, ShootPoint); } \
+	FORCEINLINE static uint32 __PPO__BeamClass() { return STRUCT_OFFSET(ABaseShip, BeamClass); }
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_13_PROLOG

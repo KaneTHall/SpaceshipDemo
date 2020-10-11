@@ -44,8 +44,6 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	FVector ProjectileSpawnPointOne;
 	FVector ProjectileSpawnPointTwo;
 	FRotator ProjectileSpawnRotation;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Beam Properties", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<ABaseBeam> BeamClass;
 	FVector CruiseVector;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float CruiseSpeed = 50;
@@ -86,5 +84,6 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
 
 };

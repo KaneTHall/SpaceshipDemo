@@ -41,6 +41,8 @@ void ABaseBeam::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 	if(OtherActor && OtherActor!=this && OtherActor!=BeamOwner)
 	{
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, BeamOwner->GetInstigatorController(),this, DamageType);
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnHitParticles, Hit.Location);
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnHitSound, Hit.Location);
 		UE_LOG(LogTemp,Warning,TEXT("%f Damage applied to: %s"),Damage,*OtherActor->GetName());
 		Destroy();
 	}

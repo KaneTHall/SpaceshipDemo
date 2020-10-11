@@ -30,6 +30,9 @@ private:
 	TSubclassOf<UDamageType> DamageType;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage", meta = (AllowPrivateAccess = "true"))
 	float Damage = 10;
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	USoundBase* ShootSound;
+
 public:
 	// Sets default values for this pawn's properties
 	ABaseShip();
@@ -43,13 +46,15 @@ protected:
 	virtual void BeginPlay() override;
 	void SetCurrentRotation(FRotator Rotation);
 	void SetCurrentLocation(FVector Location);
-	
 	FRotator GetCurrentRotation();
 	FVector GetCurrentLocation();
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ShootPoint;
 	FVector ProjectileSpawnPoint;
 	bool bTakenDamage = false; 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Beam Properties", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<ABaseBeam> BeamClass;
+	
 	 
 
 };

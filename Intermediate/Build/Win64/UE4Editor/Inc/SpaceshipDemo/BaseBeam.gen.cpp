@@ -21,6 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_UDamageType_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -131,6 +133,14 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnHitSound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OnHitSound;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnHitParticles_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OnHitParticles;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Damage_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Damage;
@@ -167,6 +177,20 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitSound_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitSound = { "OnHitSound", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, OnHitSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitSound_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles = { "OnHitParticles", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, OnHitParticles), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_Damage_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -210,6 +234,8 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement = { "BeamMovement", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, BeamMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseBeam_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitSound,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_Damage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_DamageType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMesh,
@@ -243,7 +269,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseBeam, 3657553729);
+	IMPLEMENT_CLASS(ABaseBeam, 357466665);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ABaseBeam>()
 	{
 		return ABaseBeam::StaticClass();

@@ -34,18 +34,15 @@ void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputCo
 void APlayerShip::Shoot() 
 {
     Super::Shoot();
-    if(BeamClass)
-	{
-		ProjectileSpawnPoint = ShootPoint->GetComponentLocation();
-		FVector MPosition, MDirection;
-		APlayerControllerBase* PlayerController = (APlayerControllerBase*)GetWorld()->GetFirstPlayerController();
-		PlayerController->DeprojectMousePositionToWorld(MPosition,MDirection);
-		//UE_LOG(LogTemp,Warning, TEXT("X Position: %f & Y Position: %f"),MPosition.X,MPosition.Y);
-		FVector BeamDirection = FVector(ProjectileSpawnPoint.X+100, MPosition.Y, MPosition.Z);
-		//DrawDebugLine(GetWorld(),ProjectileSpawnPointOne, BeamDirection,FColor(255,0,0,1),true ,5.f);
-		ABaseBeam* Beam = GetWorld()->SpawnActor<ABaseBeam>(BeamClass,ProjectileSpawnPoint,MDirection.Rotation());
-		Beam->SetOwner(this);
-	}
+	ProjectileSpawnPoint = ShootPoint->GetComponentLocation();
+	FVector MPosition, MDirection;
+	APlayerControllerBase* PlayerController = (APlayerControllerBase*)GetWorld()->GetFirstPlayerController();
+	PlayerController->DeprojectMousePositionToWorld(MPosition,MDirection);
+	//UE_LOG(LogTemp,Warning, TEXT("X Position: %f & Y Position: %f"),MPosition.X,MPosition.Y);
+	FVector BeamDirection = FVector(ProjectileSpawnPoint.X+100, MPosition.Y, MPosition.Z);
+	//DrawDebugLine(GetWorld(),ProjectileSpawnPointOne, BeamDirection,FColor(255,0,0,1),true ,5.f);
+	ABaseBeam* Beam = GetWorld()->SpawnActor<ABaseBeam>(BeamClass,ProjectileSpawnPoint,MDirection.Rotation());
+	Beam->SetOwner(this);
 }
 
 void APlayerShip::BeginPlay() 

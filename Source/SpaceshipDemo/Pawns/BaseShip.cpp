@@ -20,7 +20,6 @@ ABaseShip::ABaseShip()
 	ShipMesh->SetupAttachment(CapComp);
 	ShootPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Shoot Point"));
 	ShootPoint->SetupAttachment(ShipMesh);
-
 	Health =  CreateDefaultSubobject<UHealth>(TEXT("Health Component"));
 	
 	
@@ -63,7 +62,17 @@ void ABaseShip::Tick(float DeltaTime)
 
 void ABaseShip::Shoot() 
 {
-	UE_LOG(LogTemp,Warning, TEXT("Fire Condition success"));
+	if(BeamClass)
+	{
+		UE_LOG(LogTemp,Warning, TEXT("Fire Condition success"));
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(),ShootSound, GetCurrentLocation());
+		
+	}
+	else
+	{
+		UE_LOG(LogTemp,Warning, TEXT("BeamClass Nullptr"));
+		return;
+	}
 }
 
 //void DrawDebugLine(const UWorld* InWorld, FVector const& LineStart, FVector const& LineEnd, FColor const& Color, bool bPersistentLines = false, float LifeTime=-1.f, uint8 DepthPriority = 0, float Thickness = 0.f);

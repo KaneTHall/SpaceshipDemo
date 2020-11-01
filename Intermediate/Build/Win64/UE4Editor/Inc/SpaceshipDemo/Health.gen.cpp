@@ -109,6 +109,10 @@ void EmptyLinkFunctionForGeneratedCodeHealth() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentHealth_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CurrentHealth;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxHealth_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxHealth;
@@ -132,6 +136,13 @@ void EmptyLinkFunctionForGeneratedCodeHealth() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHealth_Statics::NewProp_CurrentHealth_MetaData[] = {
+		{ "Category", "Health Properties" },
+		{ "ModuleRelativePath", "Components/Health.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UHealth_Statics::NewProp_CurrentHealth = { "CurrentHealth", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHealth, CurrentHealth), METADATA_PARAMS(Z_Construct_UClass_UHealth_Statics::NewProp_CurrentHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHealth_Statics::NewProp_CurrentHealth_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHealth_Statics::NewProp_MaxHealth_MetaData[] = {
 		{ "Category", "Health Properties" },
 		{ "ModuleRelativePath", "Components/Health.h" },
@@ -139,6 +150,7 @@ void EmptyLinkFunctionForGeneratedCodeHealth() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UHealth_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHealth, MaxHealth), METADATA_PARAMS(Z_Construct_UClass_UHealth_Statics::NewProp_MaxHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHealth_Statics::NewProp_MaxHealth_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHealth_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHealth_Statics::NewProp_CurrentHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHealth_Statics::NewProp_MaxHealth,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UHealth_Statics::StaticCppClassTypeInfo = {
@@ -168,7 +180,7 @@ void EmptyLinkFunctionForGeneratedCodeHealth() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHealth, 2025981996);
+	IMPLEMENT_CLASS(UHealth, 3497280216);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UHealth>()
 	{
 		return UHealth::StaticClass();

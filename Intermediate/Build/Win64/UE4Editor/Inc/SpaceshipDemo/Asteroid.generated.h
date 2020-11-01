@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SPACESHIPDEMO_Asteroid_generated_h
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_RPC_WRAPPERS
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_INCLASS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_SPARSE_DATA
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_RPC_WRAPPERS
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAsteroid(); \
 	friend struct Z_Construct_UClass_AAsteroid_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AAsteroid)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_INCLASS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAAsteroid(); \
 	friend struct Z_Construct_UClass_AAsteroid_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AAsteroid)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_STANDARD_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AAsteroid(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAsteroid) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_ENHANCED_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AAsteroid(AAsteroid&&); \
@@ -58,33 +58,36 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AAsteroid); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAsteroid)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_PRIVATE_PROPERTY_OFFSET \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CapComp() { return STRUCT_OFFSET(AAsteroid, CapComp); } \
 	FORCEINLINE static uint32 __PPO__AsteroidMesh() { return STRUCT_OFFSET(AAsteroid, AsteroidMesh); } \
-	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(AAsteroid, Health); }
+	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(AAsteroid, Health); } \
+	FORCEINLINE static uint32 __PPO__OnDestroyedSound() { return STRUCT_OFFSET(AAsteroid, OnDestroyedSound); } \
+	FORCEINLINE static uint32 __PPO__OnDestroyedParticles() { return STRUCT_OFFSET(AAsteroid, OnDestroyedParticles); } \
+	FORCEINLINE static uint32 __PPO__AsteroidChildClass() { return STRUCT_OFFSET(AAsteroid, AsteroidChildClass); }
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_12_PROLOG
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_GENERATED_BODY_LEGACY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_13_PROLOG
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_RPC_WRAPPERS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_INCLASS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_STANDARD_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_RPC_WRAPPERS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_INCLASS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_GENERATED_BODY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_INCLASS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_15_ENHANCED_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_INCLASS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_Asteroid_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

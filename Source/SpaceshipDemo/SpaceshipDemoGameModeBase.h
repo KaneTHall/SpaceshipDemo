@@ -9,9 +9,25 @@
 /**
  * 
  */
+
+class APlayerShip;
+class APlayerControllerBase;
+
 UCLASS()
 class SPACESHIPDEMO_API ASpaceshipDemoGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+	private:
+	APlayerControllerBase* PlayerControllerRef;
+
+
+	public:
+	
+	void ActorHasDied(AActor* DeadActor);
+
+	protected:
+
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 };

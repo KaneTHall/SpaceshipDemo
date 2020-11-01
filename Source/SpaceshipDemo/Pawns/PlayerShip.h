@@ -27,10 +27,7 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	float MoveSpeed = 500.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float Acceleration = 50.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-	float RotationSpeed = 100.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-	float BarrelRollSpeed =1000.0f;
+
 
 	FVector MoveDirection;	
 	FRotator RotationX;
@@ -39,7 +36,6 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	FQuat RotateDirectionY;
 	FRotator Tilt;
 	FRotator OutOfBoundsRotator;
-	FRotator BarrelRotation;
 	FRotator InitialRotation = FRotator(0,0,0);
 	FVector ProjectileSpawnPointOne;
 	FVector ProjectileSpawnPointTwo;
@@ -58,18 +54,12 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	void RotateX(float Value);
 	void RotateY(float Value);
 	void Strafe(float Value);
-	void BarrelRollRight();
-	void BarrelRollLeft();
+	virtual void BarrelRollRight() override;
+	virtual void BarrelRollLeft() override;
 	void Boost();
 
-	
-	FTimerHandle TimerHandle;
-	float RollRate = 0.01f;
-	float RollTime = 0;
-	float RollMaxTime = 45;
-
 	APlayerController* PtrPlayerController;
-
+	
 	
 	public:
 	//Constructor
@@ -80,10 +70,11 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	//Shoot function
 	virtual void Shoot() override;
-
+	virtual void Destroyed() override;
 	protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
 
 
 };

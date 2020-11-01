@@ -25,21 +25,30 @@ private:
 	FRotator ProjectileSpawnRotation;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))	
 	UHealth* Health;
-	UFUNCTION()
-	void Crashed(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 	TSubclassOf<UDamageType> DamageType;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage", meta = (AllowPrivateAccess = "true"))
 	float Damage = 10;
 	UPROPERTY(EditAnywhere, Category = "Effects")
 	USoundBase* ShootSound;
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	USoundBase* OnDestroyedSound;
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	UParticleSystem* OnDestroyedParticles;
+	UFUNCTION()
+	void Crashed(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+	bool IsDead();
+	
 
+	
 public:
 	// Sets default values for this pawn's properties
 	ABaseShip();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void Shoot();
-
+	bool bDeflect;
+	virtual void BarrelRollRight();
+	virtual void BarrelRollLeft();
 
 protected:
 	// Called when the game starts or when spawned
@@ -54,7 +63,16 @@ protected:
 	bool bTakenDamage = false; 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Beam Properties", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<ABaseBeam> BeamClass;
-	
-	 
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float RotationSpeed = 100.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
+	float BarrelRollSpeed =1000.0f;
+	FRotator BarrelRotation;
+	FTimerHandle TimerHandle;
+	float RollRate = 0.01f;
+	float RollTime = 0;
+	float RollMaxTime = 45;
+	virtual void Destroyed() override;
+	UFUNCTION(BlueprintCallable, Category = Health)
+	float HealthPercent() const;
 };

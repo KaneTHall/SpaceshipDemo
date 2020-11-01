@@ -2,10 +2,13 @@
 
 
 #include "EnemyShip.h"
+#include "AIController.h"
 #include "GameFramework/Actor.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "SpaceshipDemo/Actors/BaseBeam.h"
+#include "SpaceshipDemo/PlayerControllers/AIPlayerController.h"
 #include "Kismet/GameplayStatics.h"
+
 
 AEnemyShip::AEnemyShip() 
 {
@@ -17,6 +20,12 @@ AEnemyShip::AEnemyShip()
 void AEnemyShip::BeginPlay() 
 {
     Super::BeginPlay();
+}
+
+void AEnemyShip::Destroyed() 
+{
+    Super::Destroyed();
+    Destroy();
 }
 
 
@@ -40,5 +49,6 @@ void AEnemyShip::Shoot()
 	//DrawDebugLine(GetWorld(),ProjectileSpawnPointOne, BeamDirection,FColor(255,0,0,1),true ,5.f);
 	ABaseBeam* Beam = GetWorld()->SpawnActor<ABaseBeam>(BeamClass,ProjectileSpawnPoint,(BeamDirection-ProjectileSpawnPoint).Rotation());
 	Beam->SetOwner(this);
+
 }
 

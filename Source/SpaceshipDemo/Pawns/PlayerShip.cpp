@@ -2,6 +2,7 @@
 
 
 #include "PlayerShip.h"
+#include "Components/CapsuleComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Engine/World.h"
 #include "GameFramework/Actor.h"
@@ -26,8 +27,8 @@ void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputCo
     PlayerInputComponent->BindAxis("Strafe", this, &APlayerShip::Strafe);
     PlayerInputComponent->BindAxis("RotateX",this, &APlayerShip::RotateX);
     PlayerInputComponent->BindAxis("RotateY",this, &APlayerShip::RotateY);
-    PlayerInputComponent->BindAction("BarrelRollRight",IE_Pressed,this, &APlayerShip::BarrelRollRight);
-    PlayerInputComponent->BindAction("BarrelRollLeft",IE_Pressed,this, &APlayerShip::BarrelRollLeft);
+    PlayerInputComponent->BindAction("BarrelRollRight",IE_Pressed,this, &ABaseShip::BarrelRollRight);
+    PlayerInputComponent->BindAction("BarrelRollLeft",IE_Pressed,this, &ABaseShip::BarrelRollLeft);
     PlayerInputComponent->BindAction("Shoot",IE_Pressed,this, &APlayerShip::Shoot);
 }
 
@@ -48,6 +49,13 @@ void APlayerShip::Shoot()
 void APlayerShip::BeginPlay() 
 {
     Super::BeginPlay();
+
+}
+
+void APlayerShip::Destroyed() 
+{
+    Super::Destroyed();
+    this->Destroy();
 }
 
 void APlayerShip::Tick(float DeltaTime) 
@@ -138,36 +146,12 @@ void APlayerShip::RotateY(float Value)
 
 void APlayerShip::BarrelRollRight() 
 {
-    
-    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
-    BarrelRotation = FRotator(0,0,BarrelRotateBy);
-    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRollRight, RollRate,true);
-    AddActorLocalRotation(BarrelRotation,true);
-    //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
-    RollTime++;
-    if(RollTime>RollMaxTime)
-    {
-        GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
-        SetCurrentRotation(FRotator(0,0,0));
-        RollTime=0;
-    }
+    Super::BarrelRollRight();
 }
 
 void APlayerShip::BarrelRollLeft() 
 {
-    
-    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
-    BarrelRotation = FRotator(0,0,BarrelRotateBy);
-    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::BarrelRollLeft, RollRate,true);
-    AddActorLocalRotation(BarrelRotation*-1,true);
-    UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
-    RollTime++;
-    if(RollTime>RollMaxTime)
-    {
-        GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
-        SetCurrentRotation(FRotator(0,0,0));
-        RollTime=0;
-    }
+    Super::BarrelRollLeft();
 }
 
 void APlayerShip::Boost() 

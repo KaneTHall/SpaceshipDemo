@@ -3,6 +3,7 @@
 
 #include "BaseBeam.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "SpaceshipDemo/Pawns/BaseShip.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -32,14 +33,24 @@ void ABaseBeam::BeginPlay()
 void ABaseBeam::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) 
 {
 	AActor* BeamOwner = GetOwner();
-	UE_LOG(LogTemp, Warning, TEXT("ONHIT Detected"));
+	//UE_LOG(LogTemp, Warning, TEXT("ONHIT Detected"));
 	if(!BeamOwner)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("No Beam Owner"));
 		return;
 	}
-	if(OtherActor && OtherActor!=this && OtherActor!=BeamOwner)
+	if(OtherActor && OtherActor!=this && OtherActor!=BeamOwner && BeamOwner->GetClass()!=OtherActor->GetClass())
 	{
+		if(ABaseShip* ShipActor = Cast<ABaseShip>(OtherActor))
+		{
+			if(ShipActor->bDeflect==true)
+			{
+				UE_LOG(LogTemp,Warning,TEXT("Deflect"));
+				UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnRicochetSound, Hit.Location);
+				BeamMovement->bShouldBounce = 1;
+				return;
+			}
+		}
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, BeamOwner->GetInstigatorController(),this, DamageType);
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnHitParticles, Hit.Location);
 		UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnHitSound, Hit.Location);

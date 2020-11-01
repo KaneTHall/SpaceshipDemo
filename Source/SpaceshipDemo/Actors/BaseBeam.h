@@ -34,6 +34,8 @@ UPROPERTY(EditAnywhere, Category = "Effects")
 UParticleSystem* OnHitParticles;
 UPROPERTY(EditAnywhere, Category = "Effects")
 USoundBase* OnHitSound;
+UPROPERTY(EditAnywhere, Category = "Effects")
+USoundBase* OnRicochetSound;
 
 
 protected:

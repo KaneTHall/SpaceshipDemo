@@ -18,7 +18,7 @@ class SPACESHIPDEMO_API AAIPlayerController : public AAIController
 	//float AcceptanceRadius = 200;
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehaviorTree;
-	
+	FString Reason = "Pawn Died";
 
 	public:
 	// Called every frame

@@ -5,6 +5,8 @@ D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovement
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Pawns/BaseShip.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseShip.generated.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h

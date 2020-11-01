@@ -133,6 +133,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnRicochetSound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OnRicochetSound;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnHitSound_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OnHitSound;
@@ -177,6 +181,13 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnRicochetSound_MetaData[] = {
+		{ "Category", "Effects" },
+		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnRicochetSound = { "OnRicochetSound", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, OnRicochetSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnRicochetSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnRicochetSound_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitSound_MetaData[] = {
 		{ "Category", "Effects" },
@@ -234,6 +245,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement = { "BeamMovement", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, BeamMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseBeam_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnRicochetSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseBeam_Statics::NewProp_Damage,
@@ -269,7 +281,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseBeam, 357466665);
+	IMPLEMENT_CLASS(ABaseBeam, 2713011102);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ABaseBeam>()
 	{
 		return ABaseBeam::StaticClass();

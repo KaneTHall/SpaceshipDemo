@@ -7,6 +7,7 @@
 #include "EnemyShip.generated.h"
 
 class UFloatingPawnMovement;
+class AIPlayerController;
 /**
  * 
  */
@@ -21,16 +22,17 @@ class SPACESHIPDEMO_API AEnemyShip : public ABaseShip
 	UFloatingPawnMovement* FloatingPawnMovement;
 	FRotator EnemyRotation;
 
-
 	public:
 	AEnemyShip();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	//virtual void Tick(float DeltaTime) override;
 	virtual void Shoot() override;
+	virtual void Destroyed() override;
 
 	protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
 	
 };

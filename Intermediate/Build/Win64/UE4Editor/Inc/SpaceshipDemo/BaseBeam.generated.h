@@ -77,7 +77,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABaseBeam); \
 	FORCEINLINE static uint32 __PPO__DamageType() { return STRUCT_OFFSET(ABaseBeam, DamageType); } \
 	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ABaseBeam, Damage); } \
 	FORCEINLINE static uint32 __PPO__OnHitParticles() { return STRUCT_OFFSET(ABaseBeam, OnHitParticles); } \
-	FORCEINLINE static uint32 __PPO__OnHitSound() { return STRUCT_OFFSET(ABaseBeam, OnHitSound); }
+	FORCEINLINE static uint32 __PPO__OnHitSound() { return STRUCT_OFFSET(ABaseBeam, OnHitSound); } \
+	FORCEINLINE static uint32 __PPO__OnRicochetSound() { return STRUCT_OFFSET(ABaseBeam, OnRicochetSound); }
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_12_PROLOG

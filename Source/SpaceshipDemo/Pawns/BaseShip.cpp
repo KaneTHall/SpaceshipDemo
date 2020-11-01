@@ -22,8 +22,6 @@ ABaseShip::ABaseShip()
 	ShootPoint->SetupAttachment(ShipMesh);
 	Health =  CreateDefaultSubobject<UHealth>(TEXT("Health Component"));
 	
-	
-	
 }
 
 // Called when the game starts or when spawned
@@ -43,6 +41,18 @@ FVector ABaseShip::GetCurrentLocation()
 	return CapComp->GetComponentLocation();
 }
 
+void ABaseShip::Destroyed() 
+{
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnDestroyedParticles, GetCurrentLocation());
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnDestroyedSound, GetCurrentLocation());
+}
+
+float ABaseShip::HealthPercent() const
+{
+	return (Health->CurrentHealth)/100;
+}
+
+
 void ABaseShip::SetCurrentRotation(FRotator Rotation) 
 {
 	CapComp->SetWorldRotation(Rotation);
@@ -57,14 +67,12 @@ void ABaseShip::SetCurrentLocation(FVector Location)
 void ABaseShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
 }
 
 void ABaseShip::Shoot() 
 {
 	if(BeamClass)
 	{
-		UE_LOG(LogTemp,Warning, TEXT("Fire Condition success"));
 		UGameplayStatics::PlaySoundAtLocation(GetWorld(),ShootSound, GetCurrentLocation());
 		
 	}
@@ -74,17 +82,67 @@ void ABaseShip::Shoot()
 		return;
 	}
 }
-
 //void DrawDebugLine(const UWorld* InWorld, FVector const& LineStart, FVector const& LineEnd, FColor const& Color, bool bPersistentLines = false, float LifeTime=-1.f, uint8 DepthPriority = 0, float Thickness = 0.f);
-
 
 void ABaseShip::Crashed(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) 
 {
 	//GetWorld()->GetFirstPlayerController()->GetPawn()
-	if(OtherActor && OtherActor!=this && bTakenDamage == false)
+	
+	if(OtherActor->GetClass()==BeamClass)
+	{
+		OtherActor->Destroy();
+	}
+
+	if(OtherActor && OtherActor!=this && bTakenDamage == false && OtherActor->GetClass()!=this->GetClass() && OtherActor->GetClass()!=BeamClass)
 	{
 		UGameplayStatics::ApplyDamage(this, Damage, this->GetInstigatorController(),OtherActor, DamageType);
-		UE_LOG(LogTemp,Warning,TEXT("%f Damage applied to: %s"),Damage,*this->GetName());
+	//	UE_LOG(LogTemp,Warning,TEXT("%f Damage applied to: %s"),Damage,*this->GetName());
+		UE_LOG(LogTemp,Warning,TEXT("%s Crashed into %s, so %f damage applied"),*OtherActor->GetName(),*this->GetName(),Damage);
+		UE_LOG(LogTemp,Warning,TEXT("%s"),*OtherActor->GetClass()->GetName());
 		bTakenDamage = true;
 	}
 }
+
+void ABaseShip::BarrelRollRight() 
+{
+    
+    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
+    BarrelRotation = FRotator(0,0,BarrelRotateBy);
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &ABaseShip::BarrelRollRight, RollRate,true);
+    AddActorLocalRotation(BarrelRotation,true);
+	bDeflect = true;
+    //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
+    RollTime++;
+    if(RollTime>RollMaxTime)
+    {
+        GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+        SetCurrentRotation(FRotator(0,0,0));
+		bDeflect = false;
+        RollTime=0;
+    }
+}
+
+void ABaseShip::BarrelRollLeft() 
+{
+    
+    float BarrelRotateBy = BarrelRollSpeed*GetWorld()->DeltaTimeSeconds;
+    BarrelRotation = FRotator(0,0,BarrelRotateBy);
+    GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &ABaseShip::BarrelRollLeft, RollRate,true);
+    AddActorLocalRotation(BarrelRotation*-1,true);
+	bDeflect = true;
+    //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
+    RollTime++;
+    if(RollTime>RollMaxTime)
+    {
+        GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+        SetCurrentRotation(FRotator(0,0,0));
+		bDeflect = false;
+        RollTime=0;
+    }
+}
+
+bool ABaseShip::IsDead() 
+{
+	return Health->CurrentHealth<=0;
+}
+

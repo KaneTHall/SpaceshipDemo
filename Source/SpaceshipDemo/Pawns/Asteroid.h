@@ -8,6 +8,7 @@
 
 class USphereComponent;
 class UHealth;
+class AAsteroidChild;
 
 UCLASS()
 class SPACESHIPDEMO_API AAsteroid : public APawn
@@ -22,6 +23,23 @@ private:
 	UStaticMeshComponent* AsteroidMesh;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))	
 	UHealth* Health;
+	FRotator InitialRotation;
+	float ScaleBy;
+	float ScaleMin  = 1.0f;
+	float ScaleLimit = 3.0f;
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	USoundBase* OnDestroyedSound;
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	UParticleSystem* OnDestroyedParticles;
+	float AsteroidSizeClass;
+	float InitialAsteroidSize = GetActorScale3D().X;
+	float CurrentAsteroidSize;
+	void InitializeAsteroid();
+	float CalculateAsteroidClass();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawner", meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<AAsteroidChild> AsteroidChildClass;
+	AAsteroidChild* SpawnedAsteroid;
+	
 
 protected:
 	// Called when the game starts or when spawned
@@ -36,5 +54,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void Destroyed() override;
+
 
 };

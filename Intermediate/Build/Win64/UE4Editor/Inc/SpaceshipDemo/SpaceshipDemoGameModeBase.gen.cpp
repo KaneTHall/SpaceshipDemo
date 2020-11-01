@@ -40,7 +40,6 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "SpaceshipDemoGameModeBase.h" },
 		{ "ModuleRelativePath", "SpaceshipDemoGameModeBase.h" },
@@ -74,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpaceshipDemoGameModeBase, 986826079);
+	IMPLEMENT_CLASS(ASpaceshipDemoGameModeBase, 1589916935);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ASpaceshipDemoGameModeBase>()
 	{
 		return ASpaceshipDemoGameModeBase::StaticClass();

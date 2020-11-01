@@ -9,6 +9,8 @@ UHealth::UHealth()
 {
 
 }
+
+
 // Called when the game starts
 void UHealth::BeginPlay()
 {
@@ -33,6 +35,7 @@ void UHealth::TakeDamage(AActor* DamagedActor, float Damage, const UDamageType* 
 		if(GameModeRef)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("%s has been destroyed"),*GetOwner()->GetName());
+			GameModeRef->ActorHasDied(GetOwner());
 		}
 		else
 		{
@@ -41,6 +44,8 @@ void UHealth::TakeDamage(AActor* DamagedActor, float Damage, const UDamageType* 
 		
 	}
 }
+
+
 
 
 

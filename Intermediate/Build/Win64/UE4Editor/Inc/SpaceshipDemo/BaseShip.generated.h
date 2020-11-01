@@ -20,11 +20,13 @@ struct FHitResult;
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_SPARSE_DATA
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execHealthPercent); \
 	DECLARE_FUNCTION(execCrashed);
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execHealthPercent); \
 	DECLARE_FUNCTION(execCrashed);
 
 
@@ -76,8 +78,12 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABaseShip); \
 	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(ABaseShip, Health); } \
 	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ABaseShip, Damage); } \
 	FORCEINLINE static uint32 __PPO__ShootSound() { return STRUCT_OFFSET(ABaseShip, ShootSound); } \
+	FORCEINLINE static uint32 __PPO__OnDestroyedSound() { return STRUCT_OFFSET(ABaseShip, OnDestroyedSound); } \
+	FORCEINLINE static uint32 __PPO__OnDestroyedParticles() { return STRUCT_OFFSET(ABaseShip, OnDestroyedParticles); } \
 	FORCEINLINE static uint32 __PPO__ShootPoint() { return STRUCT_OFFSET(ABaseShip, ShootPoint); } \
-	FORCEINLINE static uint32 __PPO__BeamClass() { return STRUCT_OFFSET(ABaseShip, BeamClass); }
+	FORCEINLINE static uint32 __PPO__BeamClass() { return STRUCT_OFFSET(ABaseShip, BeamClass); } \
+	FORCEINLINE static uint32 __PPO__RotationSpeed() { return STRUCT_OFFSET(ABaseShip, RotationSpeed); } \
+	FORCEINLINE static uint32 __PPO__BarrelRollSpeed() { return STRUCT_OFFSET(ABaseShip, BarrelRollSpeed); }
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_BaseShip_h_13_PROLOG

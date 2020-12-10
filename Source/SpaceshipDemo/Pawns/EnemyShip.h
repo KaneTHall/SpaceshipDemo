@@ -8,6 +8,7 @@
 
 class UFloatingPawnMovement;
 class AIPlayerController;
+class UItemDrop;
 /**
  * 
  */
@@ -20,6 +21,8 @@ class SPACESHIPDEMO_API AEnemyShip : public ABaseShip
 	//Components
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UFloatingPawnMovement* FloatingPawnMovement;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UItemDrop* ItemDrop;
 	FRotator EnemyRotation;
 
 	public:

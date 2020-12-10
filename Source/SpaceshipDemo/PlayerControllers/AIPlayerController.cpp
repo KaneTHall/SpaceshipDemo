@@ -19,11 +19,14 @@ void AAIPlayerController::BeginPlay()
         APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
         APawn* AIControllerPawn = this->GetPawn();
         FVector StartingWayPoint;
-        GetBlackboardComponent()->SetValueAsObject(TEXT("PlayerPawn"),PlayerPawn);
-        GetBlackboardComponent()->SetValueAsObject(TEXT("AIControllerPawn"),AIControllerPawn);
-        GetBlackboardComponent()->SetValueAsVector(TEXT("AIControllerPawnLocation"),AIControllerPawn->GetActorLocation());
-        GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerPawnLocation"),PlayerPawn->GetActorLocation());
-        GetBlackboardComponent()->SetValueAsVector(TEXT("StartingWayPoint"),StartingWayPoint);
+        if(AIControllerPawn && PlayerPawn)
+        {
+          GetBlackboardComponent()->SetValueAsObject(TEXT("PlayerPawn"),PlayerPawn);
+          GetBlackboardComponent()->SetValueAsObject(TEXT("AIControllerPawn"),AIControllerPawn);
+          GetBlackboardComponent()->SetValueAsVector(TEXT("AIControllerPawnLocation"),AIControllerPawn->GetActorLocation());
+          GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerPawnLocation"),PlayerPawn->GetActorLocation());
+          GetBlackboardComponent()->SetValueAsVector(TEXT("StartingWayPoint"),StartingWayPoint);
+        }
      }
 }
 

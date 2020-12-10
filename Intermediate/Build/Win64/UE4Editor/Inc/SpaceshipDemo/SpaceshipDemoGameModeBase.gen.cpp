@@ -31,6 +31,11 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EnemyShipMax_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_EnemyShipMax;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +51,17 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Spawning" },
+		{ "ModuleRelativePath", "SpaceshipDemoGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax = { "EnemyShipMax", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpaceshipDemoGameModeBase, EnemyShipMax), METADATA_PARAMS(Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASpaceshipDemoGameModeBase>::IsAbstract,
 	};
@@ -55,11 +71,11 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::PropPointers),
 		0,
 		0x009002ACu,
 		METADATA_PARAMS(Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::Class_MetaDataParams))
@@ -73,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpaceshipDemoGameModeBase, 1589916935);
+	IMPLEMENT_CLASS(ASpaceshipDemoGameModeBase, 4259150871);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ASpaceshipDemoGameModeBase>()
 	{
 		return ASpaceshipDemoGameModeBase::StaticClass();

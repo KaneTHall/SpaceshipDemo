@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemo_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x36E7375F,
-				0x56135127,
+				0xCEC57C37,
+				0x65321807,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

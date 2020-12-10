@@ -60,7 +60,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASpaceshipDemoGameModeBase); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASpaceshipDemoGameModeBase)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_SpaceshipDemoGameModeBase_h_19_PRIVATE_PROPERTY_OFFSET
+#define SpaceshipDemo_Source_SpaceshipDemo_SpaceshipDemoGameModeBase_h_19_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__EnemyShipMax() { return STRUCT_OFFSET(ASpaceshipDemoGameModeBase, EnemyShipMax); }
+
+
 #define SpaceshipDemo_Source_SpaceshipDemo_SpaceshipDemoGameModeBase_h_16_PROLOG
 #define SpaceshipDemo_Source_SpaceshipDemo_SpaceshipDemoGameModeBase_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

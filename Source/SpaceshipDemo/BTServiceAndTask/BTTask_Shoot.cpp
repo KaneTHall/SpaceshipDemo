@@ -16,12 +16,15 @@ EBTNodeResult::Type UBTTask_Shoot::ExecuteTask(UBehaviorTreeComponent& OwnerComp
 
     if(OwnerComp.GetAIOwner() == nullptr)
     {
+        
         return EBTNodeResult::Failed;
     }
+    
     AEnemyShip* EnemyShip = Cast<AEnemyShip>(OwnerComp.GetAIOwner()->GetPawn());
 
     if(EnemyShip == nullptr)
     {
+       
          return EBTNodeResult::Failed;
     }
 

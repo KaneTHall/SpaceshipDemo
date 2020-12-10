@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 	SPACESHIPDEMO_API UClass* Z_Construct_UClass_AEnemyShip();
 	SPACESHIPDEMO_API UClass* Z_Construct_UClass_ABaseShip();
 	UPackage* Z_Construct_UPackage__Script_SpaceshipDemo();
+	SPACESHIPDEMO_API UClass* Z_Construct_UClass_UItemDrop_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UFloatingPawnMovement_NoRegister();
 // End Cross Module References
 	void AEnemyShip::StaticRegisterNativesAEnemyShip()
@@ -32,6 +33,10 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemDrop_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemDrop;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FloatingPawnMovement_MetaData[];
 #endif
@@ -53,6 +58,15 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyShip_Statics::NewProp_ItemDrop_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Pawns/EnemyShip.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyShip_Statics::NewProp_ItemDrop = { "ItemDrop", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyShip, ItemDrop), Z_Construct_UClass_UItemDrop_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyShip_Statics::NewProp_ItemDrop_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyShip_Statics::NewProp_ItemDrop_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
@@ -64,6 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement = { "FloatingPawnMovement", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyShip, FloatingPawnMovement), Z_Construct_UClass_UFloatingPawnMovement_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyShip_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyShip_Statics::NewProp_ItemDrop,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AEnemyShip_Statics::StaticCppClassTypeInfo = {
@@ -93,7 +108,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShip, 1109515347);
+	IMPLEMENT_CLASS(AEnemyShip, 1079176368);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AEnemyShip>()
 	{
 		return AEnemyShip::StaticClass();

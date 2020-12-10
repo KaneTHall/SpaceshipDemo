@@ -52,6 +52,12 @@ float ABaseShip::HealthPercent() const
 	return (Health->CurrentHealth)/100;
 }
 
+void ABaseShip::AddHealth(float HealthAmount) 
+{
+	Health->CurrentHealth+=HealthAmount;
+}
+
+
 
 void ABaseShip::SetCurrentRotation(FRotator Rotation) 
 {
@@ -97,8 +103,8 @@ void ABaseShip::Crashed(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 	{
 		UGameplayStatics::ApplyDamage(this, Damage, this->GetInstigatorController(),OtherActor, DamageType);
 	//	UE_LOG(LogTemp,Warning,TEXT("%f Damage applied to: %s"),Damage,*this->GetName());
-		UE_LOG(LogTemp,Warning,TEXT("%s Crashed into %s, so %f damage applied"),*OtherActor->GetName(),*this->GetName(),Damage);
-		UE_LOG(LogTemp,Warning,TEXT("%s"),*OtherActor->GetClass()->GetName());
+		//UE_LOG(LogTemp,Warning,TEXT("%s Crashed into %s, so %f damage applied"),*OtherActor->GetName(),*this->GetName(),Damage);
+		//UE_LOG(LogTemp,Warning,TEXT("%s"),*OtherActor->GetClass()->GetName());
 		bTakenDamage = true;
 	}
 }
@@ -111,6 +117,7 @@ void ABaseShip::BarrelRollRight()
     GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &ABaseShip::BarrelRollRight, RollRate,true);
     AddActorLocalRotation(BarrelRotation,true);
 	bDeflect = true;
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnRollParticles, GetCurrentLocation());
     //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
     RollTime++;
     if(RollTime>RollMaxTime)
@@ -130,6 +137,7 @@ void ABaseShip::BarrelRollLeft()
     GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &ABaseShip::BarrelRollLeft, RollRate,true);
     AddActorLocalRotation(BarrelRotation*-1,true);
 	bDeflect = true;
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnRollParticles, GetCurrentLocation());
     //UE_LOG(LogTemp,Warning,TEXT("Rotate Value: %f"),GetCurrentRotation().Roll);
     RollTime++;
     if(RollTime>RollMaxTime)

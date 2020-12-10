@@ -6,6 +6,7 @@
 #include "Asteroid.h"
 #include "AsteroidChild.generated.h"
 
+class UItemDrop;
 /**
  * 
  */
@@ -14,6 +15,8 @@ class SPACESHIPDEMO_API AAsteroidChild : public AAsteroid
 {
 	GENERATED_BODY()
 	private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))	
+	UItemDrop* ItemDrop;
 
 	protected:
 	// Called when the game starts or when spawned

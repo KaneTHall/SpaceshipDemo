@@ -3,3 +3,5 @@ D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\AsteroidChild.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\Asteroid.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\Asteroid.generated.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\AsteroidChild.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Components/ItemDrop.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\ItemDrop.generated.h

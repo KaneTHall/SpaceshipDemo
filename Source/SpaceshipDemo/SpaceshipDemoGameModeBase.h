@@ -20,12 +20,16 @@ class SPACESHIPDEMO_API ASpaceshipDemoGameModeBase : public AGameModeBase
 	
 	private:
 	APlayerControllerBase* PlayerControllerRef;
-
+	//Function that sets the score to be added.
+	void SetScore(int X);
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning", meta = (AllowPrivateAccess = "true"))
+	int EnemyShipMax = 4;
 
 	public:
-	
 	void ActorHasDied(AActor* DeadActor);
-
+	bool SpawnSafe();
+	void Win();
+	
 	protected:
 
 	// Called when the game starts or when spawned

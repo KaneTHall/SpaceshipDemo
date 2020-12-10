@@ -28,6 +28,7 @@ TSubclassOf<UDamageType> DamageType;
 UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage", meta = (AllowPrivateAccess = "true"))
 float Damage = 10;
 float MovementSpeed = 1000;
+
 UFUNCTION()
 void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 UPROPERTY(EditAnywhere, Category = "Effects")

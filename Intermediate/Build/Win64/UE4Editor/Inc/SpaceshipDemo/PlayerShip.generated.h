@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SPACESHIPDEMO_PlayerShip_generated_h
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_RPC_WRAPPERS
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execGetScore);
+
+
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetScore);
+
+
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerShip(); \
@@ -61,9 +69,13 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerShip); \
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SpringArmComp() { return STRUCT_OFFSET(APlayerShip, SpringArmComp); } \
 	FORCEINLINE static uint32 __PPO__PlayerCam() { return STRUCT_OFFSET(APlayerShip, PlayerCam); } \
+	FORCEINLINE static uint32 __PPO__EnginePoint() { return STRUCT_OFFSET(APlayerShip, EnginePoint); } \
+	FORCEINLINE static uint32 __PPO__EnginePSC() { return STRUCT_OFFSET(APlayerShip, EnginePSC); } \
 	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(APlayerShip, MoveSpeed); } \
 	FORCEINLINE static uint32 __PPO__Acceleration() { return STRUCT_OFFSET(APlayerShip, Acceleration); } \
-	FORCEINLINE static uint32 __PPO__CruiseSpeed() { return STRUCT_OFFSET(APlayerShip, CruiseSpeed); }
+	FORCEINLINE static uint32 __PPO__OnBoostSound() { return STRUCT_OFFSET(APlayerShip, OnBoostSound); } \
+	FORCEINLINE static uint32 __PPO__CruiseSpeed() { return STRUCT_OFFSET(APlayerShip, CruiseSpeed); } \
+	FORCEINLINE static uint32 __PPO__BoostSpeed() { return STRUCT_OFFSET(APlayerShip, BoostSpeed); }
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_16_PROLOG

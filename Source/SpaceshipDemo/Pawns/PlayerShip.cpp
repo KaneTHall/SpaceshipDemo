@@ -9,6 +9,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystem.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "SpaceshipDemo/Actors/BaseBeam.h"
 #include "SpaceshipDemo/PlayerControllers/PlayerControllerBase.h"
 
@@ -19,6 +21,10 @@ APlayerShip::APlayerShip()
     SpringArmComp->SetupAttachment(RootComponent);
     PlayerCam = CreateDefaultSubobject<UCameraComponent>(TEXT("Player Camera Component"));
     PlayerCam->SetupAttachment(SpringArmComp);
+    EnginePoint = CreateDefaultSubobject<USceneComponent>(TEXT("Engine Point"));
+    EnginePoint->SetupAttachment(RootComponent);
+    EnginePSC = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Engine Thrusters Particle System"));
+    EnginePSC->SetupAttachment(EnginePoint);
 }
 
 void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) 
@@ -30,6 +36,7 @@ void APlayerShip::SetupPlayerInputComponent(class UInputComponent* PlayerInputCo
     PlayerInputComponent->BindAction("BarrelRollRight",IE_Pressed,this, &ABaseShip::BarrelRollRight);
     PlayerInputComponent->BindAction("BarrelRollLeft",IE_Pressed,this, &ABaseShip::BarrelRollLeft);
     PlayerInputComponent->BindAction("Shoot",IE_Pressed,this, &APlayerShip::Shoot);
+    PlayerInputComponent->BindAction("Boost",IE_Pressed,this, &APlayerShip::Boost);
 }
 
 void APlayerShip::Shoot() 
@@ -49,7 +56,19 @@ void APlayerShip::Shoot()
 void APlayerShip::BeginPlay() 
 {
     Super::BeginPlay();
+    Score = 0;
+    EnginePSC->Deactivate();
 
+}
+
+void APlayerShip::AddScore(int X) 
+{
+    Score = Score + X;
+}
+
+int APlayerShip::GetScore() 
+{
+    return Score;
 }
 
 void APlayerShip::Destroyed() 
@@ -156,5 +175,26 @@ void APlayerShip::BarrelRollLeft()
 
 void APlayerShip::Boost() 
 {
-    
+   if(NoOfBoosts>0)
+   {
+       
+        CruiseSpeed+=BoostSpeed;
+        GetWorld()->GetTimerManager().SetTimer(TimerHandle,this, &APlayerShip::Boost, BoostRate,true);
+        BoostTime++;
+        EnginePSC->Activate();
+        if(!bSoundPlayed)
+        {
+            UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnBoostSound, GetCurrentLocation());
+            bSoundPlayed = true;
+        }
+        if(BoostTime>BoostMaxTime)
+        {
+            GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+            NoOfBoosts--;
+            BoostTime=0;
+            EnginePSC->Deactivate();
+            CruiseSpeed = InitialCruiseSpeed;
+            bSoundPlayed = false;
+        }
+    }    
 }

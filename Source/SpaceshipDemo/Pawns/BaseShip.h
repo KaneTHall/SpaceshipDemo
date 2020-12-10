@@ -16,11 +16,6 @@ class SPACESHIPDEMO_API ABaseShip : public APawn
 	GENERATED_BODY()
 
 private:
-	//Components
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UCapsuleComponent* CapComp;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* ShipMesh;
 	//Variables
 	FRotator ProjectileSpawnRotation;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))	
@@ -34,6 +29,8 @@ private:
 	USoundBase* OnDestroyedSound;
 	UPROPERTY(EditAnywhere, Category = "Effects")
 	UParticleSystem* OnDestroyedParticles;
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	UParticleSystem* OnRollParticles;
 	UFUNCTION()
 	void Crashed(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 	bool IsDead();
@@ -49,7 +46,8 @@ public:
 	bool bDeflect;
 	virtual void BarrelRollRight();
 	virtual void BarrelRollLeft();
-
+	void AddHealth(float HealthAmount);
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -57,6 +55,11 @@ protected:
 	void SetCurrentLocation(FVector Location);
 	FRotator GetCurrentRotation();
 	FVector GetCurrentLocation();
+	//Components
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UCapsuleComponent* CapComp;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* ShipMesh;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ShootPoint;
 	FVector ProjectileSpawnPoint;

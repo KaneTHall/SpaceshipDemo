@@ -50,6 +50,8 @@ D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Actors/BaseBeam.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseBeam.generated.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/PlayerControllers/AIPlayerController.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\AIPlayerController.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Components/ItemDrop.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\ItemDrop.generated.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 D:\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h

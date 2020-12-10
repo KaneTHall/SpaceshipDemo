@@ -1,0 +1,9 @@
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Definitions.SpaceshipDemo.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Actors\BonusScoreItem.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Actors\BaseItem.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseItem.generated.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BonusScoreItem.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Pawns/PlayerShip.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\BaseShip.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseShip.generated.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\PlayerShip.generated.h

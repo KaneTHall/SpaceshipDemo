@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroidChild() {}
 	SPACESHIPDEMO_API UClass* Z_Construct_UClass_AAsteroidChild();
 	SPACESHIPDEMO_API UClass* Z_Construct_UClass_AAsteroid();
 	UPackage* Z_Construct_UPackage__Script_SpaceshipDemo();
+	SPACESHIPDEMO_API UClass* Z_Construct_UClass_UItemDrop_NoRegister();
 // End Cross Module References
 	void AAsteroidChild::StaticRegisterNativesAAsteroidChild()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeAsteroidChild() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemDrop_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemDrop;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +52,18 @@ void EmptyLinkFunctionForGeneratedCodeAsteroidChild() {}
 		{ "ModuleRelativePath", "Pawns/AsteroidChild.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Pawns/AsteroidChild.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop = { "ItemDrop", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsteroidChild, ItemDrop), Z_Construct_UClass_UItemDrop_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAsteroidChild_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAsteroidChild_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAsteroidChild>::IsAbstract,
 	};
@@ -55,11 +73,11 @@ void EmptyLinkFunctionForGeneratedCodeAsteroidChild() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AAsteroidChild_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AAsteroidChild_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AAsteroidChild_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AAsteroidChild_Statics::Class_MetaDataParams))
@@ -73,7 +91,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroidChild() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsteroidChild, 882680912);
+	IMPLEMENT_CLASS(AAsteroidChild, 193081246);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AAsteroidChild>()
 	{
 		return AAsteroidChild::StaticClass();

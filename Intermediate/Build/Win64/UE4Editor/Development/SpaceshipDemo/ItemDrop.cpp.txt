@@ -1,0 +1,11 @@
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Development\SpaceshipDemo\Definitions.SpaceshipDemo.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Components\ItemDrop.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\ItemDrop.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Actors/BaseItem.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseItem.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Actors/HealthItem.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\HealthItem.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Actors/BonusScoreItem.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BonusScoreItem.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Actors/ExtraBoostItem.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\ExtraBoostItem.generated.h

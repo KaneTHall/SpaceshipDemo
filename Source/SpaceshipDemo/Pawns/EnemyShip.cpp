@@ -7,13 +7,14 @@
 #include "GameFramework/FloatingPawnMovement.h"
 #include "SpaceshipDemo/Actors/BaseBeam.h"
 #include "SpaceshipDemo/PlayerControllers/AIPlayerController.h"
+#include "SpaceshipDemo/Components/ItemDrop.h"
 #include "Kismet/GameplayStatics.h"
 
 
 AEnemyShip::AEnemyShip() 
 {
     FloatingPawnMovement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("Floating Pawn Movement"));
-    
+    ItemDrop = CreateDefaultSubobject<UItemDrop>(TEXT("Item Drop Component"));
 
 }
 

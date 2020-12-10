@@ -5,6 +5,7 @@ D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\SpaceshipDemoGameModeBase.generated.h
+D:\UE_4.25\Engine\Source\Runtime\Engine\Public\EngineUtils.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 D:\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
@@ -26,3 +27,5 @@ D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Pawns/EnemyShip.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\EnemyShip.generated.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Pawns/Asteroid.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\Asteroid.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Pawns/SpaceGate.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\SpaceGate.generated.h

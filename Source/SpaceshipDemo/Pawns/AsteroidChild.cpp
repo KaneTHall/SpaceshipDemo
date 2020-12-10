@@ -2,10 +2,12 @@
 
 
 #include "AsteroidChild.h"
+#include "SpaceshipDemo/Components/ItemDrop.h"
 
 AAsteroidChild::AAsteroidChild() 
 {
-    
+    ItemDrop = CreateDefaultSubobject<UItemDrop>(TEXT("Item Drop Component"));
+
 }
 
 

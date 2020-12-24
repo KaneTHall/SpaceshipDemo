@@ -3,7 +3,9 @@
 
 #include "SpaceshipDemoGameModeBase.h"
 #include "EngineUtils.h"
+#include "Engine/GameInstance.h"
 #include "Kismet/GameplayStatics.h"
+#include "SpaceshipDemoGameInstance.h"
 #include "SpaceshipDemo/PlayerControllers/PlayerControllerBase.h"
 #include "SpaceshipDemo/Pawns/PlayerShip.h"
 #include "SpaceshipDemo/Pawns/EnemyShip.h"
@@ -11,16 +13,32 @@
 #include "SpaceshipDemo/Pawns/SpaceGate.h"
 
 
+
 void ASpaceshipDemoGameModeBase::ActorHasDied(AActor* DeadActor) 
 {
     if(APlayerShip* PlayerShip = Cast<APlayerShip>(DeadActor))
     {
         PlayerShip->Destroyed();
-
+        USpaceshipDemoGameInstance* GameInstanceRef = Cast<USpaceshipDemoGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
         if(PlayerControllerRef)
         {
-            PlayerControllerRef->SetPlayerEnabledState(false);
+            //PlayerControllerRef->SetPlayerEnabledState(false);
+            if(PlayerShip->Lives>1)
+            {
+                PlayerShip->Lives -= 1;
+                GameInstanceRef->UpdatedLives = PlayerShip->Lives;
+                UE_LOG(LogTemp, Warning, TEXT("%i Number of lives remaining"),GameInstanceRef->UpdatedLives);
+                Restart();
+            }
+            else
+            {
+                GameInstanceRef->UpdatedLives = 3;
+                GameOver();
+            }
+            
+
         }
+        
     }
     else if(AEnemyShip* DeadEnemyShip = Cast<AEnemyShip>(DeadActor))
     {
@@ -52,6 +70,16 @@ void ASpaceshipDemoGameModeBase::SetScore(int X)
 {
     APlayerShip* ControlledShip = Cast<APlayerShip>(UGameplayStatics::GetPlayerPawn(GetWorld(),0));
     ControlledShip->AddScore(X);
+}
+
+void ASpaceshipDemoGameModeBase::GameOver() 
+{
+      UGameplayStatics::OpenLevel(this, "Menu", false);
+}
+
+void ASpaceshipDemoGameModeBase::Restart() 
+{
+    UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
 }
 
 bool ASpaceshipDemoGameModeBase::SpawnSafe() 

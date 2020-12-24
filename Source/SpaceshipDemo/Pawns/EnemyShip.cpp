@@ -21,6 +21,7 @@ AEnemyShip::AEnemyShip()
 void AEnemyShip::BeginPlay() 
 {
     Super::BeginPlay();
+    SetShipRotation();
 }
 
 void AEnemyShip::Destroyed() 
@@ -29,15 +30,17 @@ void AEnemyShip::Destroyed()
     Destroy();
 }
 
+void AEnemyShip::BarrelRollRight() 
+{
+    Super::BarrelRollRight();
+    SetShipRotation();
+}
+
 
 void AEnemyShip::Tick(float DeltaTime) 
 {
     Super::Tick(DeltaTime);
-    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
-    FRotator PlayerRotation = PlayerPawn->GetActorRotation();
-    EnemyRotation = GetCurrentRotation();
-    EnemyRotation.Yaw = PlayerRotation.Yaw-180;
-    SetCurrentRotation(EnemyRotation);
+
 }
 
 void AEnemyShip::Shoot() 
@@ -50,6 +53,13 @@ void AEnemyShip::Shoot()
 	//DrawDebugLine(GetWorld(),ProjectileSpawnPointOne, BeamDirection,FColor(255,0,0,1),true ,5.f);
 	ABaseBeam* Beam = GetWorld()->SpawnActor<ABaseBeam>(BeamClass,ProjectileSpawnPoint,(BeamDirection-ProjectileSpawnPoint).Rotation());
 	Beam->SetOwner(this);
-
 }
 
+void AEnemyShip::SetShipRotation() 
+{
+     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
+    FRotator PlayerRotation = PlayerPawn->GetActorRotation();
+    EnemyRotation = GetCurrentRotation();
+    EnemyRotation.Yaw = PlayerRotation.Yaw-180;
+    SetCurrentRotation(EnemyRotation);
+}

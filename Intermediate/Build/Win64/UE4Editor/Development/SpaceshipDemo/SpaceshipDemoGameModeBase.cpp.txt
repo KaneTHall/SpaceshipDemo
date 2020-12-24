@@ -17,6 +17,8 @@ D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.ge
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\SpaceshipDemoGameInstance.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\SpaceshipDemoGameInstance.generated.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/PlayerControllers/PlayerControllerBase.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\PlayerControllerBase.generated.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Pawns/PlayerShip.h

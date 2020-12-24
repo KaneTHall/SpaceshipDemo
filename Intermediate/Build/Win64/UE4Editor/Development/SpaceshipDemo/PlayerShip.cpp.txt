@@ -29,6 +29,8 @@ D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponen
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/Emitter.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Emitter.generated.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystemComponent.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/SpaceshipDemoGameInstance.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\SpaceshipDemoGameInstance.generated.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Actors/BaseBeam.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseBeam.generated.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/PlayerControllers/PlayerControllerBase.h

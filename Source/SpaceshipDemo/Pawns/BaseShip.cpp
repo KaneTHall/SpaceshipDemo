@@ -52,6 +52,11 @@ float ABaseShip::HealthPercent() const
 	return (Health->CurrentHealth)/100;
 }
 
+int ABaseShip::GetHealth() const
+{
+	return Health->CurrentHealth;
+}
+
 void ABaseShip::AddHealth(float HealthAmount) 
 {
 	Health->CurrentHealth+=HealthAmount;

@@ -21,7 +21,8 @@ void ATurretShip::Shoot()
     FVector PPosition, PDirection;
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
 	FVector BeamDirection = PlayerPawn->GetActorLocation();
-    CannonMesh->SetWorldRotation((CannonMesh->GetComponentLocation()-BeamDirection).Rotation()*-1);
+    FRotator NewShipRotation = FRotator(GetCurrentRotation().Roll,(GetCurrentLocation()-BeamDirection).Rotation().Pitch,  GetCurrentRotation().Yaw);
+    SetCurrentRotation(NewShipRotation);
 	ABaseBeam* Beam = GetWorld()->SpawnActor<ABaseBeam>(BeamClass,ShootPointTwo->GetComponentLocation(),(BeamDirection-ShootPointTwo->GetComponentLocation()).Rotation());
 	Beam->SetOwner(this);
 }
@@ -31,5 +32,4 @@ void ATurretShip::Destroyed()
     Super::Destroyed();
 
 }
-
 

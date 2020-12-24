@@ -16,11 +16,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_SPARSE_DATA
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetLives); \
 	DECLARE_FUNCTION(execGetScore);
 
 
 #define SpaceshipDemo_Source_SpaceshipDemo_Pawns_PlayerShip_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetLives); \
 	DECLARE_FUNCTION(execGetScore);
 
 

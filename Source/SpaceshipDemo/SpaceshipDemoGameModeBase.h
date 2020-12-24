@@ -24,7 +24,8 @@ class SPACESHIPDEMO_API ASpaceshipDemoGameModeBase : public AGameModeBase
 	void SetScore(int X);
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning", meta = (AllowPrivateAccess = "true"))
 	int EnemyShipMax = 4;
-
+	void GameOver();
+	void Restart();
 	public:
 	void ActorHasDied(AActor* DeadActor);
 	bool SpawnSafe();

@@ -24,6 +24,7 @@ class SPACESHIPDEMO_API AEnemyShip : public ABaseShip
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UItemDrop* ItemDrop;
 	FRotator EnemyRotation;
+	void SetShipRotation();
 
 	public:
 	AEnemyShip();
@@ -32,7 +33,7 @@ class SPACESHIPDEMO_API AEnemyShip : public ABaseShip
 	//virtual void Tick(float DeltaTime) override;
 	virtual void Shoot() override;
 	virtual void Destroyed() override;
-
+	virtual void BarrelRollRight() override; 
 	protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

@@ -24,6 +24,7 @@ public:
 	ATurretShip();
 	virtual void Shoot() override;
 	virtual void Destroyed() override;
+
 protected:
 
 

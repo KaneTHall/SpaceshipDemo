@@ -11,6 +11,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Particles/ParticleSystem.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "SpaceshipDemo/SpaceshipDemoGameInstance.h"
 #include "SpaceshipDemo/Actors/BaseBeam.h"
 #include "SpaceshipDemo/PlayerControllers/PlayerControllerBase.h"
 
@@ -58,7 +59,10 @@ void APlayerShip::BeginPlay()
     Super::BeginPlay();
     Score = 0;
     EnginePSC->Deactivate();
-
+    USpaceshipDemoGameInstance* GameInstanceRef = Cast<USpaceshipDemoGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+    Lives = GameInstanceRef->UpdatedLives;
+   //UE_LOG(LogTemp,Error, TEXT("%i Lives remaining"),Lives);
+    
 }
 
 void APlayerShip::AddScore(int X) 
@@ -69,6 +73,11 @@ void APlayerShip::AddScore(int X)
 int APlayerShip::GetScore() 
 {
     return Score;
+}
+
+int APlayerShip::GetLives() 
+{
+    return Lives;
 }
 
 void APlayerShip::Destroyed() 

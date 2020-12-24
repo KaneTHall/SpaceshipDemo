@@ -47,6 +47,7 @@ public:
 	virtual void BarrelRollRight();
 	virtual void BarrelRollLeft();
 	void AddHealth(float HealthAmount);
+	int GetHealth() const;
 	
 protected:
 	// Called when the game starts or when spawned
@@ -78,4 +79,5 @@ protected:
 	virtual void Destroyed() override;
 	UFUNCTION(BlueprintCallable, Category = Health)
 	float HealthPercent() const;
+
 };

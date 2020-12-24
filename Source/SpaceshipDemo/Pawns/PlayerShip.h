@@ -56,6 +56,7 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	float DamagedActorHiddenTime = 0;
 	//Score variable
 	int Score;
+	//Lives variable
 	void Move(float Value);
 	void RotateX(float Value);
 	void RotateY(float Value);
@@ -87,12 +88,17 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	void AddScore(int X);
 	UFUNCTION(BlueprintCallable, Category = "Score")
 	int GetScore();
+	UFUNCTION(BlueprintCallable, Category = "Lives")
+	int GetLives();
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	int NoOfBoosts = 2;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Lives")
+	int Lives = 3;
+
 	protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	
 	
 
 };

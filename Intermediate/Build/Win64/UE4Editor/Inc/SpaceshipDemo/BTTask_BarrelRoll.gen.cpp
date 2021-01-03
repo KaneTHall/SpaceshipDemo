@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_BarrelRoll() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTTask_BarrelRoll_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * Blackboard Task Node to call the BarrelRoll function\n */" },
 		{ "IncludePath", "BTServiceAndTask/BTTask_BarrelRoll.h" },
 		{ "ModuleRelativePath", "BTServiceAndTask/BTTask_BarrelRoll.h" },
+		{ "ToolTip", "Blackboard Task Node to call the BarrelRoll function" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTTask_BarrelRoll_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_BarrelRoll() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTTask_BarrelRoll, 2667713989);
+	IMPLEMENT_CLASS(UBTTask_BarrelRoll, 2221553475);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UBTTask_BarrelRoll>()
 	{
 		return UBTTask_BarrelRoll::StaticClass();

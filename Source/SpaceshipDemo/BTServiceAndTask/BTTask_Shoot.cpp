@@ -27,7 +27,7 @@ EBTNodeResult::Type UBTTask_Shoot::ExecuteTask(UBehaviorTreeComponent& OwnerComp
        
          return EBTNodeResult::Failed;
     }
-
+    //Call Shoot method from EnemyShip
     EnemyShip->Shoot();
 
      return EBTNodeResult::Succeeded;

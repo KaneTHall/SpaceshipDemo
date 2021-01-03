@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeBTService_UpdateWayPoint() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTService_UpdateWayPoint_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n Blackboard Service Update WayPoints Class - Returns a new FVector for the AIPlayerContrtroller to move the pawn to. \n */" },
 		{ "IncludePath", "BTServiceAndTask/BTService_UpdateWayPoint.h" },
 		{ "ModuleRelativePath", "BTServiceAndTask/BTService_UpdateWayPoint.h" },
+		{ "ToolTip", "Blackboard Service Update WayPoints Class - Returns a new FVector for the AIPlayerContrtroller to move the pawn to." },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTService_UpdateWayPoint_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeBTService_UpdateWayPoint() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTService_UpdateWayPoint, 1798511499);
+	IMPLEMENT_CLASS(UBTService_UpdateWayPoint, 1796822522);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UBTService_UpdateWayPoint>()
 	{
 		return UBTService_UpdateWayPoint::StaticClass();

@@ -11,14 +11,13 @@
 void AAIPlayerController::BeginPlay() 
 {
      Super::BeginPlay();
-    
-
      if(AIBehaviorTree!=nullptr)
      {
         RunBehaviorTree(AIBehaviorTree);
         APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
         APawn* AIControllerPawn = this->GetPawn();
         FVector StartingWayPoint;
+        //Set BlackBoardComponent Values
         if(AIControllerPawn && PlayerPawn)
         {
           GetBlackboardComponent()->SetValueAsObject(TEXT("PlayerPawn"),PlayerPawn);

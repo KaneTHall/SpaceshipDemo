@@ -7,7 +7,8 @@
 #include "ExtraBoostItem.generated.h"
 
 /**
- * 
+ * ExtraBoostItem Class - Class for an object that increases the number of boosts when the item is picked up
+ * Inherits from BaseItem Class
  */
 class APlayerShip;
 UCLASS()
@@ -23,7 +24,8 @@ class SPACESHIPDEMO_API AExtraBoostItem : public ABaseItem
 	public:
 
 	protected:
-		// Called when the game starts or when spawned
+	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	//Effect function overidden from ABaseItem - called when player overlaps with item                                                       
 	virtual void Effect(APlayerShip* PlayerShip) override;
 };

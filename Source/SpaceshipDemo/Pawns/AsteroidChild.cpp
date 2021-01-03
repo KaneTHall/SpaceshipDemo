@@ -6,6 +6,7 @@
 
 AAsteroidChild::AAsteroidChild() 
 {
+    //Adds an ItemDrop component to the Asteroid Hierarchy for AsteroidChild.
     ItemDrop = CreateDefaultSubobject<UItemDrop>(TEXT("Item Drop Component"));
 
 }

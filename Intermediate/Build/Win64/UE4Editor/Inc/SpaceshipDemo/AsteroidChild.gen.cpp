@@ -46,18 +46,21 @@ void EmptyLinkFunctionForGeneratedCodeAsteroidChild() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsteroidChild_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * AsteroidChild Class - Inherits from Asteroid Class \n * \n */" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Pawns/AsteroidChild.h" },
 		{ "ModuleRelativePath", "Pawns/AsteroidChild.h" },
+		{ "ToolTip", "AsteroidChild Class - Inherits from Asteroid Class" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
+		{ "Comment", "//ItemDrop Component - Causes Item to spawn when Destroyed\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/AsteroidChild.h" },
+		{ "ToolTip", "ItemDrop Component - Causes Item to spawn when Destroyed" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop = { "ItemDrop", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsteroidChild, ItemDrop), Z_Construct_UClass_UItemDrop_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsteroidChild_Statics::NewProp_ItemDrop_MetaData)) };
@@ -91,7 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroidChild() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsteroidChild, 193081246);
+	IMPLEMENT_CLASS(AAsteroidChild, 1618620132);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AAsteroidChild>()
 	{
 		return AAsteroidChild::StaticClass();

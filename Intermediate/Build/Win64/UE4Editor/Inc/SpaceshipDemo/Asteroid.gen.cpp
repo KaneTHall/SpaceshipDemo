@@ -72,9 +72,11 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsteroid_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/** \n * Asteroid Class - Base class for the Asteorid Child class\n * Inherited by the AsteroidChild class\n * Class contains member functions and variables for an Asteroid.\n*/" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Pawns/Asteroid.h" },
 		{ "ModuleRelativePath", "Pawns/Asteroid.h" },
+		{ "ToolTip", "Asteroid Class - Base class for the Asteorid Child class\nInherited by the AsteroidChild class\nClass contains member functions and variables for an Asteroid." },
 	};
 #endif
 #if WITH_METADATA
@@ -95,7 +97,9 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsteroid_Statics::NewProp_OnDestroyedSound_MetaData[] = {
 		{ "Category", "Effects" },
+		{ "Comment", "//USoundBase and UParticleSystem for Asteroid Destroyed Sound/Effects\n" },
 		{ "ModuleRelativePath", "Pawns/Asteroid.h" },
+		{ "ToolTip", "USoundBase and UParticleSystem for Asteroid Destroyed Sound/Effects" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroid_Statics::NewProp_OnDestroyedSound = { "OnDestroyedSound", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsteroid, OnDestroyedSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAsteroid_Statics::NewProp_OnDestroyedSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsteroid_Statics::NewProp_OnDestroyedSound_MetaData)) };
@@ -121,10 +125,10 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAsteroid_Statics::NewProp_CapComp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
-		{ "Comment", "//Components\n" },
+		{ "Comment", "//Asteroid Components\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/Asteroid.h" },
-		{ "ToolTip", "Components" },
+		{ "ToolTip", "Asteroid Components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroid_Statics::NewProp_CapComp = { "CapComp", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAsteroid, CapComp), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAsteroid_Statics::NewProp_CapComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAsteroid_Statics::NewProp_CapComp_MetaData)) };
@@ -163,7 +167,7 @@ void EmptyLinkFunctionForGeneratedCodeAsteroid() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAsteroid, 2881247584);
+	IMPLEMENT_CLASS(AAsteroid, 1011473155);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AAsteroid>()
 	{
 		return AAsteroid::StaticClass();

@@ -11,6 +11,7 @@ UBTService_HealthCritical::UBTService_HealthCritical()
     NodeName = TEXT("Health Critical?");
 }
 
+//Every tick check if AIOwner Health is below the critical threshold. 
 void UBTService_HealthCritical::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) 
 {
     Super::TickNode(OwnerComp,NodeMemory,DeltaSeconds);

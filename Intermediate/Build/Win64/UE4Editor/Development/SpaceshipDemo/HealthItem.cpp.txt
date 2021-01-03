@@ -3,8 +3,6 @@ D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Actors\HealthItem.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Actors\BaseItem.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseItem.generated.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\HealthItem.generated.h
-D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Components/Health.h
-D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\Health.generated.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystem.h
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/ParticlePerfStats.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystem.generated.h
@@ -12,6 +10,8 @@ D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponen
 D:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Particles/Emitter.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Emitter.generated.h
 D:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystemComponent.generated.h
+D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Components/Health.h
+D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\Health.generated.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo/Pawns/PlayerShip.h
 D:\Unreal Projects\SpaceshipDemo\Source\SpaceshipDemo\Pawns\BaseShip.h
 D:\Unreal Projects\SpaceshipDemo\Intermediate\Build\Win64\UE4Editor\Inc\SpaceshipDemo\BaseShip.generated.h

@@ -117,7 +117,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseShip_Crashed_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/** Crashed UFUnction - Called on Pawn collision with another collider*/" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "Crashed UFUnction - Called on Pawn collision with another collider" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseShip_Crashed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseShip, nullptr, "Crashed", nullptr, nullptr, sizeof(BaseShip_eventCrashed_Parms), Z_Construct_UFunction_ABaseShip_Crashed_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseShip_Crashed_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C40401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABaseShip_Crashed_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseShip_Crashed_Statics::Function_MetaDataParams)) };
@@ -150,7 +152,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseShip_HealthPercent_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Health" },
+		{ "Comment", "/** UFunction - Called in the HUD blueprint to display health bar*/" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "UFunction - Called in the HUD blueprint to display health bar" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseShip_HealthPercent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseShip, nullptr, "HealthPercent", nullptr, nullptr, sizeof(BaseShip_eventHealthPercent_Parms), Z_Construct_UFunction_ABaseShip_HealthPercent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseShip_HealthPercent_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABaseShip_HealthPercent_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseShip_HealthPercent_Statics::Function_MetaDataParams)) };
@@ -231,14 +235,16 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceshipDemo,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseShip_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABaseShip_Crashed, "Crashed" }, // 65223894
-		{ &Z_Construct_UFunction_ABaseShip_HealthPercent, "HealthPercent" }, // 3316911747
+		{ &Z_Construct_UFunction_ABaseShip_Crashed, "Crashed" }, // 3088864700
+		{ &Z_Construct_UFunction_ABaseShip_HealthPercent, "HealthPercent" }, // 2617421145
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseShip_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/** \n *  Base Class for the Ship Pawn\n *  Inherited by the Player Ship Pawn\n *  Inherited by the Enemy Ships \n *  Class holds each pawns shared functions and variables\n*/" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Pawns/BaseShip.h" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "Base Class for the Ship Pawn\nInherited by the Player Ship Pawn\nInherited by the Enemy Ships\nClass holds each pawns shared functions and variables" },
 	};
 #endif
 #if WITH_METADATA
@@ -253,7 +259,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseShip_Statics::NewProp_RotationSpeed_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
+		{ "Comment", "/** Barrel roll properties*/" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "Barrel roll properties" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseShip_Statics::NewProp_RotationSpeed = { "RotationSpeed", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseShip, RotationSpeed), METADATA_PARAMS(Z_Construct_UClass_ABaseShip_Statics::NewProp_RotationSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::NewProp_RotationSpeed_MetaData)) };
@@ -261,7 +269,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseShip_Statics::NewProp_BeamClass_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Beam Properties" },
+		{ "Comment", "/** Subclass for the Blueprint of the Beam Actor*/" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "Subclass for the Blueprint of the Beam Actor" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ABaseShip_Statics::NewProp_BeamClass = { "BeamClass", nullptr, (EPropertyFlags)0x0024080000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseShip, BeamClass), Z_Construct_UClass_ABaseBeam_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ABaseShip_Statics::NewProp_BeamClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::NewProp_BeamClass_MetaData)) };
@@ -287,10 +297,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseShip_Statics::NewProp_CapComp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
-		{ "Comment", "//Components\n" },
+		{ "Comment", "/** Pawn protected components*/" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
-		{ "ToolTip", "Components" },
+		{ "ToolTip", "Pawn protected components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseShip_Statics::NewProp_CapComp = { "CapComp", nullptr, (EPropertyFlags)0x002008000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseShip, CapComp), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseShip_Statics::NewProp_CapComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::NewProp_CapComp_MetaData)) };
@@ -304,7 +314,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseShip_Statics::NewProp_OnDestroyedParticles_MetaData[] = {
 		{ "Category", "Effects" },
+		{ "Comment", "/** UParticleSystems for Pawn Particles effects */" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "UParticleSystems for Pawn Particles effects" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseShip_Statics::NewProp_OnDestroyedParticles = { "OnDestroyedParticles", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseShip, OnDestroyedParticles), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseShip_Statics::NewProp_OnDestroyedParticles_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::NewProp_OnDestroyedParticles_MetaData)) };
@@ -318,7 +330,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseShip_Statics::NewProp_ShootSound_MetaData[] = {
 		{ "Category", "Effects" },
+		{ "Comment", "/** USoundBase for Pawn Sounds*/" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "USoundBase for Pawn Sounds" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseShip_Statics::NewProp_ShootSound = { "ShootSound", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseShip, ShootSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseShip_Statics::NewProp_ShootSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::NewProp_ShootSound_MetaData)) };
@@ -334,8 +348,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseShip_Statics::NewProp_Health_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
+		{ "Comment", "/** Health Component */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/BaseShip.h" },
+		{ "ToolTip", "Health Component" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseShip_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseShip, Health), Z_Construct_UClass_UHealth_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseShip_Statics::NewProp_Health_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::NewProp_Health_MetaData)) };
@@ -380,7 +396,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseShip, 3573141102);
+	IMPLEMENT_CLASS(ABaseShip, 543883586);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ABaseShip>()
 	{
 		return ABaseShip::StaticClass();

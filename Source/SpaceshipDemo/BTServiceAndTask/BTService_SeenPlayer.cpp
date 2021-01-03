@@ -21,7 +21,7 @@ void UBTService_SeenPlayer::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* N
     {
         return;
     }
-
+    //Check if Player has passed the AIOwners location.
     if(PlayerPawn->GetActorLocation().X<AIOwner->GetActorLocation().X)
     {
         bSeenPlayer=true;

@@ -12,11 +12,13 @@ ABaseBeam::ABaseBeam()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
+	//Setup the hiearchy of components for the Beamn actor
 	SphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("Sphere Component"));
 	RootComponent = SphereComp;
 	BeamMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Beam Mesh Component"));
 	BeamMesh->SetupAttachment(SphereComp);
 	BeamMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Movement Component"));
+	//Beam properties
 	BeamMovement->InitialSpeed = MovementSpeed;
 	BeamMovement->MaxSpeed = MovementSpeed;
 	BeamMovement->ProjectileGravityScale = 0;
@@ -26,6 +28,7 @@ ABaseBeam::ABaseBeam()
 void ABaseBeam::BeginPlay()
 {
 	Super::BeginPlay();
+	//Call OnHit function when Beam collides with another object. 
 	SphereComp->OnComponentHit.AddDynamic(this,&ABaseBeam::OnHit);
 
 }
@@ -33,7 +36,6 @@ void ABaseBeam::BeginPlay()
 void ABaseBeam::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) 
 {
 	AActor* BeamOwner = GetOwner();
-	//UE_LOG(LogTemp, Warning, TEXT("ONHIT Detected"));
 	if(!BeamOwner)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("No Beam Owner"));
@@ -41,6 +43,7 @@ void ABaseBeam::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 	}
 	if(OtherActor && OtherActor!=this && OtherActor!=BeamOwner && BeamOwner->GetClass()!=OtherActor->GetClass())
 	{
+		//If beam hits a ship (Player or  enemy) while bDeflect = true then the beam will bounce off the ship and not take damage.
 		if(ABaseShip* ShipActor = Cast<ABaseShip>(OtherActor))
 		{
 			if(ShipActor->bDeflect==true)
@@ -54,7 +57,9 @@ void ABaseBeam::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimiti
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, BeamOwner->GetInstigatorController(),this, DamageType);
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnHitParticles, Hit.Location);
 		UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnHitSound, Hit.Location);
-		UE_LOG(LogTemp,Warning,TEXT("%f Damage applied to: %s"),Damage,*OtherActor->GetName());
+		/** DEBUG Line
+		 * UE_LOG(LogTemp,Warning,TEXT("%f Damage applied to: %s"),Damage,*OtherActor->GetName()); - Print the name of the Actor the beam has hit
+		*/
 		Destroy();
 	}
 }

@@ -17,18 +17,18 @@ struct FHitResult;
 #endif
 #define SPACESHIPDEMO_BaseBeam_generated_h
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_RPC_WRAPPERS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_SPARSE_DATA
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnHit);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_INCLASS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABaseBeam(); \
 	friend struct Z_Construct_UClass_ABaseBeam_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseBeam)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_INCLASS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesABaseBeam(); \
 	friend struct Z_Construct_UClass_ABaseBeam_Statics; \
@@ -46,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(ABaseBeam)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_STANDARD_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ABaseBeam(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABaseBeam) \
@@ -59,7 +59,7 @@ private: \
 public:
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_ENHANCED_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABaseBeam(ABaseBeam&&); \
@@ -70,7 +70,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABaseBeam); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABaseBeam)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_PRIVATE_PROPERTY_OFFSET \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__BeamMovement() { return STRUCT_OFFSET(ABaseBeam, BeamMovement); } \
 	FORCEINLINE static uint32 __PPO__SphereComp() { return STRUCT_OFFSET(ABaseBeam, SphereComp); } \
 	FORCEINLINE static uint32 __PPO__BeamMesh() { return STRUCT_OFFSET(ABaseBeam, BeamMesh); } \
@@ -81,27 +81,27 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABaseBeam); \
 	FORCEINLINE static uint32 __PPO__OnRicochetSound() { return STRUCT_OFFSET(ABaseBeam, OnRicochetSound); }
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_12_PROLOG
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_GENERATED_BODY_LEGACY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_17_PROLOG
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_RPC_WRAPPERS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_INCLASS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_STANDARD_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_RPC_WRAPPERS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_INCLASS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_GENERATED_BODY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_INCLASS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_15_ENHANCED_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_INCLASS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_BaseBeam_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

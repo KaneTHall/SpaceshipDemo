@@ -74,9 +74,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerShip); \
 	FORCEINLINE static uint32 __PPO__EnginePoint() { return STRUCT_OFFSET(APlayerShip, EnginePoint); } \
 	FORCEINLINE static uint32 __PPO__EnginePSC() { return STRUCT_OFFSET(APlayerShip, EnginePSC); } \
 	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(APlayerShip, MoveSpeed); } \
-	FORCEINLINE static uint32 __PPO__Acceleration() { return STRUCT_OFFSET(APlayerShip, Acceleration); } \
 	FORCEINLINE static uint32 __PPO__OnBoostSound() { return STRUCT_OFFSET(APlayerShip, OnBoostSound); } \
 	FORCEINLINE static uint32 __PPO__CruiseSpeed() { return STRUCT_OFFSET(APlayerShip, CruiseSpeed); } \
+	FORCEINLINE static uint32 __PPO__BoostMaxTime() { return STRUCT_OFFSET(APlayerShip, BoostMaxTime); } \
 	FORCEINLINE static uint32 __PPO__BoostSpeed() { return STRUCT_OFFSET(APlayerShip, BoostSpeed); }
 
 

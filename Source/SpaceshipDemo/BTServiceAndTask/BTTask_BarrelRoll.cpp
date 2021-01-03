@@ -24,7 +24,7 @@ EBTNodeResult::Type UBTTask_BarrelRoll::ExecuteTask(UBehaviorTreeComponent& Owne
     {
          return EBTNodeResult::Failed;
     }
-
+    //Call the EnemyShip BarrelRoll function when tasknode doesn't fail. 
     EnemyShip->BarrelRollRight();
 
     return EBTNodeResult::Succeeded;

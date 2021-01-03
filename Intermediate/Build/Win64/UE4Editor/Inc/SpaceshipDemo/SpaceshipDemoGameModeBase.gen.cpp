@@ -55,7 +55,9 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Spawning" },
+		{ "Comment", "//Set the total number of EnemyShips allowed to Spawn\n" },
 		{ "ModuleRelativePath", "SpaceshipDemoGameModeBase.h" },
+		{ "ToolTip", "Set the total number of EnemyShips allowed to Spawn" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax = { "EnemyShipMax", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpaceshipDemoGameModeBase, EnemyShipMax), METADATA_PARAMS(Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceshipDemoGameModeBase_Statics::NewProp_EnemyShipMax_MetaData)) };
@@ -89,7 +91,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpaceshipDemoGameModeBase, 4259150871);
+	IMPLEMENT_CLASS(ASpaceshipDemoGameModeBase, 4185485499);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ASpaceshipDemoGameModeBase>()
 	{
 		return ASpaceshipDemoGameModeBase::StaticClass();

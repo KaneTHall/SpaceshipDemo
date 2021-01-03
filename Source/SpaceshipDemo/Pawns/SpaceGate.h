@@ -10,15 +10,18 @@ class UCapsuleComponent;
 class UBoxComponent;
 class UHealth;
 
+/**
+ * SpaceGate Class
+ * Object that will destroy player if they don't destroy it before they pass through. 
+ */
+
 UCLASS()
 class SPACESHIPDEMO_API ASpaceGate : public APawn
 {
 	GENERATED_BODY()
 
-
-
 private:
-	//Components
+	//SpaceGate  Components
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* SceneComp;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
@@ -37,9 +40,11 @@ private:
 	UParticleSystem* OnDestroyedParticles;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UParticleSystemComponent* PSC;
+	//Collision UFUnction - Called when Collider collides with another collider
 	UFUNCTION()
 	void ActiveGate(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 	TSubclassOf<UDamageType> DamageType;
+	//Damage that is applied on collisiion
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Damage", meta = (AllowPrivateAccess = "true"))
 	float Damage = 200;
 protected:
@@ -51,6 +56,7 @@ public:
 	ASpaceGate();
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	// Called when SpaceGate has been desroyed
 	virtual void Destroyed() override;
 
 };

@@ -46,6 +46,7 @@ void AAsteroid::Destroyed()
 {
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnDestroyedParticles, RootComponent->GetComponentLocation());
 	UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnDestroyedSound, RootComponent->GetComponentLocation());
+	//Spawns an AsteroidChild when this (Bigger) Asteroid is destroyed
 	if(CalculateAsteroidClass()>1)
 	{
 		SpawnedAsteroid = GetWorld()->SpawnActor<AAsteroidChild>(AsteroidChildClass,RootComponent->GetComponentLocation(),RootComponent->GetComponentRotation());
@@ -66,6 +67,7 @@ void AAsteroid::SetCurrentScale(float Scale)
 
 void AAsteroid::InitializeAsteroid() 
 {
+	//Randomizes the Asteroid Size/Scale so they look different each time they are spawned
 	InitialRotation = FRotator(FMath::RandRange(0,360),FMath::RandRange(0,360),FMath::RandRange(0,360));
 	SetCurrentRotation(InitialRotation);
 	ScaleBy = FMath::RandRange(ScaleMin,ScaleLimit)/3.0f;
@@ -75,10 +77,12 @@ void AAsteroid::InitializeAsteroid()
 float AAsteroid::CalculateAsteroidClass() 
 {
 	CurrentAsteroidSize = GetActorScale3D().X;
-	//UE_LOG(LogTemp,Warning,TEXT("Initial Size of Asteroid:%f \n Current Size of Asteroid:%f"),InitialAsteroidSize, GetActorScale3D().X);
 	AsteroidSizeClass = ScaleBy / (InitialAsteroidSize/3);
 	AsteroidSizeClass = FMath::FloorToFloat(AsteroidSizeClass+0.2f);
-	//UE_LOG(LogTemp,Warning,TEXT("Asteroid Class:%f"),FMath::FloorToFloat(AsteroidSizeClass));
+	/** DEBUG Line
+	 * UE_LOG(LogTemp,Warning,TEXT("Initial Size of Asteroid:%f \n Current Size of Asteroid:%f"),InitialAsteroidSize, GetActorScale3D().X); - Prints Initial Asteroid Size and current Asteroid Size
+	 * UE_LOG(LogTemp,Warning,TEXT("Asteroid Class:%f"),FMath::FloorToFloat(AsteroidSizeClass)); - Prints Asteroid Size Class 
+	 * */
 	return AsteroidSizeClass;
 }
 

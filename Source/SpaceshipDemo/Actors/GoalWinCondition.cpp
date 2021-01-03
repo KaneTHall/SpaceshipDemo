@@ -19,6 +19,7 @@ AGoalWinCondition::AGoalWinCondition()
 void AGoalWinCondition::BeginPlay()
 {
 	Super::BeginPlay();
+	//Call Goal() function when the player overlaps with this object.
 	BoxComp->OnComponentBeginOverlap.AddDynamic(this,&AGoalWinCondition::Goal);
 	GameModeRef = Cast<ASpaceshipDemoGameModeBase>(UGameplayStatics::GetGameMode(GetWorld()));
 }
@@ -30,10 +31,8 @@ void AGoalWinCondition::Tick(float DeltaTime)
 
 }
 
-
 void AGoalWinCondition::Goal(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult) 
 {
-
 		if(APlayerShip* PlayerShip = Cast<APlayerShip>(OtherActor))
 		{
 			UE_LOG(LogTemp, Error, TEXT("You Win!!!"));
@@ -42,5 +41,4 @@ void AGoalWinCondition::Goal(UPrimitiveComponent* OverlappedComponent, AActor* O
 				GameModeRef->Win();
 			}
 		}
-	
 }

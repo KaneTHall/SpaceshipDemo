@@ -7,7 +7,7 @@
 #include "AIPlayerController.generated.h"
 
 /**
- * 
+ * PlayerController class for AI
  */
 UCLASS()
 class SPACESHIPDEMO_API AAIPlayerController : public AAIController
@@ -16,6 +16,7 @@ class SPACESHIPDEMO_API AAIPlayerController : public AAIController
 	
 	private:
 	//float AcceptanceRadius = 200;
+	//BehaviorTree assign in Editor
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehaviorTree;
 	FString Reason = "Pawn Died";

@@ -66,7 +66,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerShip_GetLives_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Lives" },
+		{ "Comment", "// Get Lives UFUNCTION - Called in the HUD UI Blueprint to display the Players lives.\n" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Get Lives UFUNCTION - Called in the HUD UI Blueprint to display the Players lives." },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerShip_GetLives_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerShip, nullptr, "GetLives", nullptr, nullptr, sizeof(PlayerShip_eventGetLives_Parms), Z_Construct_UFunction_APlayerShip_GetLives_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerShip_GetLives_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_APlayerShip_GetLives_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerShip_GetLives_Statics::Function_MetaDataParams)) };
@@ -99,7 +101,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_APlayerShip_GetScore_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Score" },
+		{ "Comment", "// Get Score UFUNCTION - Called in the HUD UI Blueprint to display the Players score\n" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Get Score UFUNCTION - Called in the HUD UI Blueprint to display the Players score" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerShip_GetScore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerShip, nullptr, "GetScore", nullptr, nullptr, sizeof(PlayerShip_eventGetScore_Parms), Z_Construct_UFunction_APlayerShip_GetScore_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerShip_GetScore_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_APlayerShip_GetScore_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerShip_GetScore_Statics::Function_MetaDataParams)) };
@@ -136,6 +140,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BoostSpeed;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BoostMaxTime_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BoostMaxTime;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CruiseSpeed_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CruiseSpeed;
@@ -143,10 +151,6 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnBoostSound_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OnBoostSound;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Acceleration_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Acceleration;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
 #endif
@@ -176,28 +180,33 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceshipDemo,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_APlayerShip_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_APlayerShip_GetLives, "GetLives" }, // 2226395842
-		{ &Z_Construct_UFunction_APlayerShip_GetScore, "GetScore" }, // 757439754
+		{ &Z_Construct_UFunction_APlayerShip_GetLives, "GetLives" }, // 398472378
+		{ &Z_Construct_UFunction_APlayerShip_GetScore, "GetScore" }, // 3898971667
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n *  PlayerShip Class - Inherits from Baseclass\n *  All player specific member variables and functions used, declared and implemented here. \n */" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Pawns/PlayerShip.h" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "PlayerShip Class - Inherits from Baseclass\nAll player specific member variables and functions used, declared and implemented here." },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_Lives_MetaData[] = {
 		{ "Category", "Lives" },
+		{ "Comment", "// Number of Lives the player has. Adjust to change the number of lives available to the player.  \n" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Number of Lives the player has. Adjust to change the number of lives available to the player." },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_Lives = { "Lives", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, Lives), METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_Lives_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_Lives_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_NoOfBoosts_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
+		{ "Comment", "// Number of Boosts that can be used - Used in Boost() function. Adjusts to change the number of boosts available to the player.\n" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Number of Boosts that can be used - Used in Boost() function. Adjusts to change the number of boosts available to the player." },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_NoOfBoosts = { "NoOfBoosts", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, NoOfBoosts), METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_NoOfBoosts_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_NoOfBoosts_MetaData)) };
@@ -210,33 +219,41 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostSpeed = { "BoostSpeed", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, BoostSpeed), METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostSpeed_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostMaxTime_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "Comment", "//Boost Max Time - Adjust to change how long the Boost function is in effect for.\n" },
+		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Boost Max Time - Adjust to change how long the Boost function is in effect for." },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostMaxTime = { "BoostMaxTime", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, BoostMaxTime), METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostMaxTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostMaxTime_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_CruiseSpeed_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
+		{ "Comment", "//Cruise Speed - Adjust the speed of the Player Ship cruise speed (Forward Movement)\n" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Cruise Speed - Adjust the speed of the Player Ship cruise speed (Forward Movement)" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_CruiseSpeed = { "CruiseSpeed", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, CruiseSpeed), METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_CruiseSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_CruiseSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_OnBoostSound_MetaData[] = {
 		{ "Category", "Effects" },
+		{ "Comment", "//Sound Base - Sound plays on Player using boost\n" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Sound Base - Sound plays on Player using boost" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_OnBoostSound = { "OnBoostSound", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, OnBoostSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_OnBoostSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_OnBoostSound_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_Acceleration_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Movement" },
-		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_Acceleration = { "Acceleration", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, Acceleration), METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_Acceleration_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_Acceleration_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_MoveSpeed_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Movement" },
+		{ "Comment", "//Move Speed - Adjust to change the Player Ship movement speed (Up, Down, Left or Right) Speed\n" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Move Speed - Adjust to change the Player Ship movement speed (Up, Down, Left or Right) Speed" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, MoveSpeed), METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_MoveSpeed_MetaData)) };
@@ -271,8 +288,10 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerShip_Statics::NewProp_SpringArmComp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
+		{ "Comment", "//Player specific components\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/PlayerShip.h" },
+		{ "ToolTip", "Player specific components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerShip_Statics::NewProp_SpringArmComp = { "SpringArmComp", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerShip, SpringArmComp), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_APlayerShip_Statics::NewProp_SpringArmComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerShip_Statics::NewProp_SpringArmComp_MetaData)) };
@@ -280,9 +299,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_Lives,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_NoOfBoosts,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_BoostMaxTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_CruiseSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_OnBoostSound,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_Acceleration,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_MoveSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_EnginePSC,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerShip_Statics::NewProp_EnginePoint,
@@ -316,7 +335,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerShip, 3463156340);
+	IMPLEMENT_CLASS(APlayerShip, 3583456105);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<APlayerShip>()
 	{
 		return APlayerShip::StaticClass();

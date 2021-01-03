@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeBTService_SeenPlayer() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTService_SeenPlayer_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n *  UBTService_SeenPlayer Class - Used to create a Blackboard Service that returns true when the Player hasn't moved passed the AIOwner\n */" },
 		{ "IncludePath", "BTServiceAndTask/BTService_SeenPlayer.h" },
 		{ "ModuleRelativePath", "BTServiceAndTask/BTService_SeenPlayer.h" },
+		{ "ToolTip", "UBTService_SeenPlayer Class - Used to create a Blackboard Service that returns true when the Player hasn't moved passed the AIOwner" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTService_SeenPlayer_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeBTService_SeenPlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTService_SeenPlayer, 2499692843);
+	IMPLEMENT_CLASS(UBTService_SeenPlayer, 491131553);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UBTService_SeenPlayer>()
 	{
 		return UBTService_SeenPlayer::StaticClass();

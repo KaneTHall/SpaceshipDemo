@@ -16,18 +16,18 @@ struct FHitResult;
 #endif
 #define SPACESHIPDEMO_EnemyShip_Spawner_generated_h
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_RPC_WRAPPERS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_SPARSE_DATA
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSpawnTrigger);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSpawnTrigger);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_INCLASS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEnemyShip_Spawner(); \
 	friend struct Z_Construct_UClass_AEnemyShip_Spawner_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(AEnemyShip_Spawner)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_INCLASS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesAEnemyShip_Spawner(); \
 	friend struct Z_Construct_UClass_AEnemyShip_Spawner_Statics; \
@@ -45,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(AEnemyShip_Spawner)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_STANDARD_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AEnemyShip_Spawner(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AEnemyShip_Spawner) \
@@ -58,7 +58,7 @@ private: \
 public:
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_ENHANCED_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AEnemyShip_Spawner(AEnemyShip_Spawner&&); \
@@ -69,33 +69,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyShip_Spawner); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEnemyShip_Spawner)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_PRIVATE_PROPERTY_OFFSET \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__BoxComp() { return STRUCT_OFFSET(AEnemyShip_Spawner, BoxComp); } \
 	FORCEINLINE static uint32 __PPO__SpawnNum() { return STRUCT_OFFSET(AEnemyShip_Spawner, SpawnNum); } \
 	FORCEINLINE static uint32 __PPO__EnemyShipClass() { return STRUCT_OFFSET(AEnemyShip_Spawner, EnemyShipClass); }
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_13_PROLOG
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_GENERATED_BODY_LEGACY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_18_PROLOG
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_RPC_WRAPPERS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_INCLASS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_STANDARD_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_RPC_WRAPPERS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_INCLASS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_GENERATED_BODY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_INCLASS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_16_ENHANCED_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_INCLASS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_EnemyShip_Spawner_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

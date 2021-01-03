@@ -7,7 +7,7 @@
 #include "BTService_SeenPlayer.generated.h"
 
 /**
- * 
+ *  UBTService_SeenPlayer Class - Used to create a Blackboard Service that returns true when the Player hasn't moved passed the AIOwner
  */
 UCLASS()
 class SPACESHIPDEMO_API UBTService_SeenPlayer : public UBTService_BlackboardBase

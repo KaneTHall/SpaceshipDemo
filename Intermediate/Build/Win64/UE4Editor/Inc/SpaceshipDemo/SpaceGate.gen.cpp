@@ -109,7 +109,9 @@ void EmptyLinkFunctionForGeneratedCodeSpaceGate() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpaceGate_ActiveGate_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Collision UFUnction - Called when Collider collides with another collider\n" },
 		{ "ModuleRelativePath", "Pawns/SpaceGate.h" },
+		{ "ToolTip", "Collision UFUnction - Called when Collider collides with another collider" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpaceGate_ActiveGate_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpaceGate, nullptr, "ActiveGate", nullptr, nullptr, sizeof(SpaceGate_eventActiveGate_Parms), Z_Construct_UFunction_ASpaceGate_ActiveGate_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpaceGate_ActiveGate_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C40401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASpaceGate_ActiveGate_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpaceGate_ActiveGate_Statics::Function_MetaDataParams)) };
@@ -182,20 +184,24 @@ void EmptyLinkFunctionForGeneratedCodeSpaceGate() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceshipDemo,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASpaceGate_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ASpaceGate_ActiveGate, "ActiveGate" }, // 3149541885
+		{ &Z_Construct_UFunction_ASpaceGate_ActiveGate, "ActiveGate" }, // 3270878343
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpaceGate_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * SpaceGate Class\n * Object that will destroy player if they don't destroy it before they pass through. \n */" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Pawns/SpaceGate.h" },
 		{ "ModuleRelativePath", "Pawns/SpaceGate.h" },
+		{ "ToolTip", "SpaceGate Class\nObject that will destroy player if they don't destroy it before they pass through." },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpaceGate_Statics::NewProp_Damage_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Damage" },
+		{ "Comment", "//Damage that is applied on collisiion\n" },
 		{ "ModuleRelativePath", "Pawns/SpaceGate.h" },
+		{ "ToolTip", "Damage that is applied on collisiion" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASpaceGate_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpaceGate, Damage), METADATA_PARAMS(Z_Construct_UClass_ASpaceGate_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceGate_Statics::NewProp_Damage_MetaData)) };
@@ -271,10 +277,10 @@ void EmptyLinkFunctionForGeneratedCodeSpaceGate() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpaceGate_Statics::NewProp_SceneComp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
-		{ "Comment", "//Components\n" },
+		{ "Comment", "//SpaceGate  Components\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/SpaceGate.h" },
-		{ "ToolTip", "Components" },
+		{ "ToolTip", "SpaceGate  Components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceGate_Statics::NewProp_SceneComp = { "SceneComp", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpaceGate, SceneComp), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASpaceGate_Statics::NewProp_SceneComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceGate_Statics::NewProp_SceneComp_MetaData)) };
@@ -317,7 +323,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceGate() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpaceGate, 4276895544);
+	IMPLEMENT_CLASS(ASpaceGate, 3005536289);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ASpaceGate>()
 	{
 		return ASpaceGate::StaticClass();

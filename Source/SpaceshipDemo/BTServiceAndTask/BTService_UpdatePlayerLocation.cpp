@@ -10,6 +10,7 @@ UBTService_UpdatePlayerLocation::UBTService_UpdatePlayerLocation()
     NodeName = TEXT("Update Player Location");
 }
 
+//Update the blackboardkey for the Players location every tick.
 void UBTService_UpdatePlayerLocation::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) 
 {
     Super::TickNode(OwnerComp,NodeMemory,DeltaSeconds);

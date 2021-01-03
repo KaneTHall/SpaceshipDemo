@@ -51,10 +51,11 @@ void EmptyLinkFunctionForGeneratedCodeTurretShip() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATurretShip_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/** \n * TurretShip Class - Inherits from EnemyShip Class\n * Extends the Enemyship class for TurretShips. \n * All specific member variables and functions are stored here\n */" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Pawns/TurretShip.h" },
 		{ "ModuleRelativePath", "Pawns/TurretShip.h" },
+		{ "ToolTip", "TurretShip Class - Inherits from EnemyShip Class\nExtends the Enemyship class for TurretShips.\nAll specific member variables and functions are stored here" },
 	};
 #endif
 #if WITH_METADATA
@@ -70,8 +71,10 @@ void EmptyLinkFunctionForGeneratedCodeTurretShip() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATurretShip_Statics::NewProp_CannonMesh_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
+		{ "Comment", "//TurretShip Components\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/TurretShip.h" },
+		{ "ToolTip", "TurretShip Components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATurretShip_Statics::NewProp_CannonMesh = { "CannonMesh", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATurretShip, CannonMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATurretShip_Statics::NewProp_CannonMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATurretShip_Statics::NewProp_CannonMesh_MetaData)) };
@@ -106,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeTurretShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATurretShip, 1216922225);
+	IMPLEMENT_CLASS(ATurretShip, 627206432);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ATurretShip>()
 	{
 		return ATurretShip::StaticClass();

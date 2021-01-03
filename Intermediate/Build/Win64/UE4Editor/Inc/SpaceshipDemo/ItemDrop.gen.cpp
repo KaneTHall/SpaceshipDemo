@@ -59,8 +59,10 @@ void EmptyLinkFunctionForGeneratedCodeItemDrop() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UItemDrop_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
+		{ "Comment", "/**\n * ItemDrop Component class - Component that drops an Item Actor when the Actor this component is attached to is destroyed. \n * Member variables and functions for classes.\n * */" },
 		{ "IncludePath", "Components/ItemDrop.h" },
 		{ "ModuleRelativePath", "Components/ItemDrop.h" },
+		{ "ToolTip", "ItemDrop Component class - Component that drops an Item Actor when the Actor this component is attached to is destroyed.\nMember variables and functions for classes." },
 	};
 #endif
 #if WITH_METADATA
@@ -83,7 +85,9 @@ void EmptyLinkFunctionForGeneratedCodeItemDrop() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UItemDrop_Statics::NewProp_HealthItemClass_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Spawning" },
+		{ "Comment", "//Item Drop Components\n" },
 		{ "ModuleRelativePath", "Components/ItemDrop.h" },
+		{ "ToolTip", "Item Drop Components" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UItemDrop_Statics::NewProp_HealthItemClass = { "HealthItemClass", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UItemDrop, HealthItemClass), Z_Construct_UClass_AHealthItem_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UItemDrop_Statics::NewProp_HealthItemClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UItemDrop_Statics::NewProp_HealthItemClass_MetaData)) };
@@ -119,7 +123,7 @@ void EmptyLinkFunctionForGeneratedCodeItemDrop() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UItemDrop, 4247941087);
+	IMPLEMENT_CLASS(UItemDrop, 881042665);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UItemDrop>()
 	{
 		return UItemDrop::StaticClass();

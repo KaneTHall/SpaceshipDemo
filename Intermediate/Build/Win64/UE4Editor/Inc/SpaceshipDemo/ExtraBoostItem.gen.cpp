@@ -88,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeExtraBoostItem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AExtraBoostItem, 70328847);
+	IMPLEMENT_CLASS(AExtraBoostItem, 4285380945);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AExtraBoostItem>()
 	{
 		return AExtraBoostItem::StaticClass();

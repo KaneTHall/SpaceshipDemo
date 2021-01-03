@@ -17,18 +17,18 @@ struct FHitResult;
 #endif
 #define SPACESHIPDEMO_SpaceGate_generated_h
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_RPC_WRAPPERS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_SPARSE_DATA
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execActiveGate);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execActiveGate);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_INCLASS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASpaceGate(); \
 	friend struct Z_Construct_UClass_ASpaceGate_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(ASpaceGate)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_INCLASS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_INCLASS \
 private: \
 	static void StaticRegisterNativesASpaceGate(); \
 	friend struct Z_Construct_UClass_ASpaceGate_Statics; \
@@ -46,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(ASpaceGate)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_STANDARD_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASpaceGate(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASpaceGate) \
@@ -59,7 +59,7 @@ private: \
 public:
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_ENHANCED_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASpaceGate(ASpaceGate&&); \
@@ -70,7 +70,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASpaceGate); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASpaceGate)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_PRIVATE_PROPERTY_OFFSET \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SceneComp() { return STRUCT_OFFSET(ASpaceGate, SceneComp); } \
 	FORCEINLINE static uint32 __PPO__CapsuleCompOne() { return STRUCT_OFFSET(ASpaceGate, CapsuleCompOne); } \
 	FORCEINLINE static uint32 __PPO__CapsuleCompTwo() { return STRUCT_OFFSET(ASpaceGate, CapsuleCompTwo); } \
@@ -83,27 +83,27 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASpaceGate); \
 	FORCEINLINE static uint32 __PPO__Damage() { return STRUCT_OFFSET(ASpaceGate, Damage); }
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_13_PROLOG
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_GENERATED_BODY_LEGACY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_18_PROLOG
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_RPC_WRAPPERS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_INCLASS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_STANDARD_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_RPC_WRAPPERS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_INCLASS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_GENERATED_BODY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_INCLASS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_16_ENHANCED_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_INCLASS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Pawns_SpaceGate_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

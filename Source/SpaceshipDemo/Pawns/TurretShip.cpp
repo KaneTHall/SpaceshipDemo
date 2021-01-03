@@ -7,15 +7,16 @@
 
 ATurretShip::ATurretShip() 
 {
+    //Adding more components to the Turretship and setting them up to work with the Enemyship hierarchy
     CannonMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Cannon Mesh"));
     CannonMesh->SetupAttachment(ShipMesh);
     ShootPointTwo = CreateDefaultSubobject<USceneComponent>(TEXT("Shoot Point Two"));
     ShootPointTwo->SetupAttachment(ShipMesh);
 }
 
-
 void ATurretShip::Shoot() 
 {
+    //Simmilar shoot function uses Super::Shoot() to call the same Shoot function as EnemyShip and does simmilar functonaility to spawn a second bullet and fire from ShootPointTwo
     Super::Shoot();
     UE_LOG(LogTemp,Warning,TEXT("Turret Shoot Test"));
     FVector PPosition, PDirection;

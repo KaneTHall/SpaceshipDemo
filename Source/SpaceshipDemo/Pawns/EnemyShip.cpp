@@ -13,9 +13,9 @@
 
 AEnemyShip::AEnemyShip() 
 {
+    //Adding more components to the Enemyship and setting them up to work with the Baseship hierarchy
     FloatingPawnMovement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("Floating Pawn Movement"));
     ItemDrop = CreateDefaultSubobject<UItemDrop>(TEXT("Item Drop Component"));
-
 }
 
 void AEnemyShip::BeginPlay() 
@@ -57,6 +57,7 @@ void AEnemyShip::Shoot()
 
 void AEnemyShip::SetShipRotation() 
 {
+    //Set ship to face the player
      APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
     FRotator PlayerRotation = PlayerPawn->GetActorRotation();
     EnemyRotation = GetCurrentRotation();

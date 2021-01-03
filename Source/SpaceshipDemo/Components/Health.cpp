@@ -9,8 +9,6 @@ UHealth::UHealth()
 {
 
 }
-
-
 // Called when the game starts
 void UHealth::BeginPlay()
 {
@@ -32,6 +30,7 @@ void UHealth::TakeDamage(AActor* DamagedActor, float Damage, const UDamageType* 
 
 	if(CurrentHealth<=0)
 	{
+		//When Actor this component is attached to has died call the ActorHasDied function from GameModeRef()
 		if(GameModeRef)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("%s has been destroyed"),*GetOwner()->GetName());

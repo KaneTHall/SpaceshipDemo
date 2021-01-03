@@ -12,14 +12,22 @@ class AHealthItem;
 class ABonusScoreItem;
 class AExtraBoostItem;
 
+/**
+ * ItemDrop Component class - Component that drops an Item Actor when the Actor this component is attached to is destroyed. 
+ * Member variables and functions for classes.
+ * */
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SPACESHIPDEMO_API UItemDrop : public UActorComponent
 {
-	GENERATED_BODY()
+GENERATED_BODY()
 private:
 AActor* MyOwner;
+//Called when this component is destroyed
 void OnComponentDestroyed(bool bDestroyingHierarchy) override;
+//Called when OnCompomentDestroyed() is called. - Spawns an Item actor
 void SpawnItem(int ItemSelect);
+//ItemSelector variable - Value this is assigned to determines the Item spawned.
 int ItemSelector;
 FVector OwnerLocation;
 FRotator OwnerRotation;
@@ -32,6 +40,7 @@ public:
 	UItemDrop();	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	//Item Drop Components
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AHealthItem> HealthItemClass;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning", meta = (AllowPrivateAccess = "true"))

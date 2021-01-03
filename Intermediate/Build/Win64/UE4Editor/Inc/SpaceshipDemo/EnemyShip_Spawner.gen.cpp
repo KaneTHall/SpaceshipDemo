@@ -113,9 +113,9 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip_Spawner() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//OnComponentOverlap function\n" },
+		{ "Comment", "//OnComponentOverlap function called when Actor overlaps with this object\n" },
 		{ "ModuleRelativePath", "Actors/EnemyShip_Spawner.h" },
-		{ "ToolTip", "OnComponentOverlap function" },
+		{ "ToolTip", "OnComponentOverlap function called when Actor overlaps with this object" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemyShip_Spawner, nullptr, "SpawnTrigger", nullptr, nullptr, sizeof(EnemyShip_Spawner_eventSpawnTrigger_Parms), Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00440401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger_Statics::Function_MetaDataParams)) };
@@ -160,12 +160,14 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip_Spawner() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceshipDemo,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AEnemyShip_Spawner_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger, "SpawnTrigger" }, // 3099448057
+		{ &Z_Construct_UFunction_AEnemyShip_Spawner_SpawnTrigger, "SpawnTrigger" }, // 1491839877
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyShip_Spawner_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * EnemyShip_Spawner Class - Object used to trigger enemies to spawn upon overlapp \n * \n*/" },
 		{ "IncludePath", "Actors/EnemyShip_Spawner.h" },
 		{ "ModuleRelativePath", "Actors/EnemyShip_Spawner.h" },
+		{ "ToolTip", "EnemyShip_Spawner Class - Object used to trigger enemies to spawn upon overlapp" },
 	};
 #endif
 #if WITH_METADATA
@@ -180,7 +182,9 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip_Spawner() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyShip_Spawner_Statics::NewProp_SpawnNum_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Spawning" },
+		{ "Comment", "//Number of enemy ships that can be spawned - Adjust to change.\n" },
 		{ "ModuleRelativePath", "Actors/EnemyShip_Spawner.h" },
+		{ "ToolTip", "Number of enemy ships that can be spawned - Adjust to change." },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AEnemyShip_Spawner_Statics::NewProp_SpawnNum = { "SpawnNum", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyShip_Spawner, SpawnNum), METADATA_PARAMS(Z_Construct_UClass_AEnemyShip_Spawner_Statics::NewProp_SpawnNum_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyShip_Spawner_Statics::NewProp_SpawnNum_MetaData)) };
@@ -225,7 +229,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip_Spawner() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShip_Spawner, 1577206275);
+	IMPLEMENT_CLASS(AEnemyShip_Spawner, 597967617);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AEnemyShip_Spawner>()
 	{
 		return AEnemyShip_Spawner::StaticClass();

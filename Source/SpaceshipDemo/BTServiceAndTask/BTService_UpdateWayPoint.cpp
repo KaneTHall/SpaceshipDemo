@@ -13,15 +13,14 @@ UBTService_UpdateWayPoint::UBTService_UpdateWayPoint()
 
 void UBTService_UpdateWayPoint::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) 
 {
-      Super::TickNode(OwnerComp,NodeMemory,DeltaSeconds);
+    Super::TickNode(OwnerComp,NodeMemory,DeltaSeconds);
     APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
     if(PlayerPawn == nullptr)
     {
         return;
     }
     WayPointTimer+=DeltaSeconds;
-   //UE_LOG(LogTemp,Warning,TEXT("WayPoint Timer: %f"),WayPointTimer);
-     //FVector NextWayPoint = AIWayPoints(PlayerPawn->GetActorLocation())[1];
+    //Assign a new waypoint and update value in the Blackboard.
     if(AIWayPoints(PlayerPawn->GetActorLocation()).Num()!=0)
     {
          NextWayPoint = AIWayPoints(PlayerPawn->GetActorLocation())[FMath::RandRange(0,AIWayPoints(PlayerPawn->GetActorLocation()).Num()-1)];
@@ -31,7 +30,7 @@ void UBTService_UpdateWayPoint::TickNode(UBehaviorTreeComponent& OwnerComp, uint
 
 }
 
-
+//Return an array of waypoints calculated by the players position in the navigation system.
 TArray<FVector> UBTService_UpdateWayPoint::AIWayPoints(FVector PlayerLocation) 
 {
     UNavigationSystemV1* NavigationSystem = FNavigationSystem::GetCurrent<UNavigationSystemV1>(GetWorld());

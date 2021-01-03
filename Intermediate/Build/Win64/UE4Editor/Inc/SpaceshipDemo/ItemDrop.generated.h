@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SPACESHIPDEMO_ItemDrop_generated_h
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_RPC_WRAPPERS
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_RPC_WRAPPERS_NO_PURE_DECLS
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_INCLASS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_SPARSE_DATA
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_RPC_WRAPPERS
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUItemDrop(); \
 	friend struct Z_Construct_UClass_UItemDrop_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(UItemDrop)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_INCLASS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesUItemDrop(); \
 	friend struct Z_Construct_UClass_UItemDrop_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UItemDrop)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_STANDARD_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UItemDrop(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UItemDrop) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_ENHANCED_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UItemDrop(UItemDrop&&); \
@@ -58,28 +58,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UItemDrop); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UItemDrop)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_PRIVATE_PROPERTY_OFFSET
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_15_PROLOG
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_GENERATED_BODY_LEGACY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_PRIVATE_PROPERTY_OFFSET
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_20_PROLOG
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_RPC_WRAPPERS \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_INCLASS \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_STANDARD_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_RPC_WRAPPERS \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_INCLASS \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_GENERATED_BODY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_INCLASS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_18_ENHANCED_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_INCLASS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Components_ItemDrop_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

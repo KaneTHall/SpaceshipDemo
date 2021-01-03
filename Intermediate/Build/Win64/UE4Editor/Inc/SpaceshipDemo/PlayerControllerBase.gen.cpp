@@ -51,10 +51,11 @@ void EmptyLinkFunctionForGeneratedCodePlayerControllerBase() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerControllerBase_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * PlayerController Class\n * Setup the HUD\n */" },
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "PlayerControllers/PlayerControllerBase.h" },
 		{ "ModuleRelativePath", "PlayerControllers/PlayerControllerBase.h" },
+		{ "ToolTip", "PlayerController Class\nSetup the HUD" },
 	};
 #endif
 #if WITH_METADATA
@@ -68,7 +69,9 @@ void EmptyLinkFunctionForGeneratedCodePlayerControllerBase() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APlayerControllerBase_Statics::NewProp_HUDClass_MetaData[] = {
 		{ "Category", "PlayerControllerBase" },
+		{ "Comment", "//UserWidget assign in HUD\n" },
 		{ "ModuleRelativePath", "PlayerControllers/PlayerControllerBase.h" },
+		{ "ToolTip", "UserWidget assign in HUD" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_APlayerControllerBase_Statics::NewProp_HUDClass = { "HUDClass", nullptr, (EPropertyFlags)0x0044000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerControllerBase, HUDClass), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_APlayerControllerBase_Statics::NewProp_HUDClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerControllerBase_Statics::NewProp_HUDClass_MetaData)) };
@@ -103,7 +106,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerControllerBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerControllerBase, 3361520128);
+	IMPLEMENT_CLASS(APlayerControllerBase, 2295851613);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<APlayerControllerBase>()
 	{
 		return APlayerControllerBase::StaticClass();

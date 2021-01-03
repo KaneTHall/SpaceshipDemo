@@ -84,7 +84,9 @@ void EmptyLinkFunctionForGeneratedCodeHealth() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UHealth_TakeDamage_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//UFunction called when Actor this component is attached to takes damage\n" },
 		{ "ModuleRelativePath", "Components/Health.h" },
+		{ "ToolTip", "UFunction called when Actor this component is attached to takes damage" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UHealth_TakeDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UHealth, nullptr, "TakeDamage", nullptr, nullptr, sizeof(Health_eventTakeDamage_Parms), Z_Construct_UFunction_UHealth_TakeDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UHealth_TakeDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UHealth_TakeDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UHealth_TakeDamage_Statics::Function_MetaDataParams)) };
@@ -125,14 +127,16 @@ void EmptyLinkFunctionForGeneratedCodeHealth() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceshipDemo,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UHealth_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UHealth_TakeDamage, "TakeDamage" }, // 2539130558
+		{ &Z_Construct_UFunction_UHealth_TakeDamage, "TakeDamage" }, // 2227703301
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHealth_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
+		{ "Comment", "/**\n *  Health Component - ActorComponent that applies a health system to each Actor\n * \n*/" },
 		{ "IncludePath", "Components/Health.h" },
 		{ "ModuleRelativePath", "Components/Health.h" },
+		{ "ToolTip", "Health Component - ActorComponent that applies a health system to each Actor" },
 	};
 #endif
 #if WITH_METADATA
@@ -180,7 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeHealth() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHealth, 3497280216);
+	IMPLEMENT_CLASS(UHealth, 4137657612);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UHealth>()
 	{
 		return UHealth::StaticClass();

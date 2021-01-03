@@ -8,6 +8,10 @@
 
 class ASpaceshipDemoGameModeBase;
 
+/**
+ *  Health Component - ActorComponent that applies a health system to each Actor
+ * 
+*/
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SPACESHIPDEMO_API UHealth : public UActorComponent
 {
@@ -27,6 +31,7 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+	//UFunction called when Actor this component is attached to takes damage
 	UFUNCTION()
 	void TakeDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser);
 	

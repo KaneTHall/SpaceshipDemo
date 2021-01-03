@@ -115,9 +115,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseItem() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseItem_ApplyEffect_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//OnComponentOverlap function\n" },
+		{ "Comment", "//OnComponentOverlap function - Called when an Actor overlaps with this Actor\n" },
 		{ "ModuleRelativePath", "Actors/BaseItem.h" },
-		{ "ToolTip", "OnComponentOverlap function" },
+		{ "ToolTip", "OnComponentOverlap function - Called when an Actor overlaps with this Actor" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseItem_ApplyEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseItem, nullptr, "ApplyEffect", nullptr, nullptr, sizeof(BaseItem_eventApplyEffect_Parms), Z_Construct_UFunction_ABaseItem_ApplyEffect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseItem_ApplyEffect_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00440401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABaseItem_ApplyEffect_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseItem_ApplyEffect_Statics::Function_MetaDataParams)) };
@@ -170,12 +170,14 @@ void EmptyLinkFunctionForGeneratedCodeBaseItem() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceshipDemo,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseItem_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABaseItem_ApplyEffect, "ApplyEffect" }, // 1914594956
+		{ &Z_Construct_UFunction_ABaseItem_ApplyEffect, "ApplyEffect" }, // 1417738118
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseItem_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * BaseItem Class - This class is for the Item Actors. Playership is able to pick up Items which inherit from this class.\n * Inherited by BonusScoreItem Class\n * Inherited by the ExtraBoostItem Class\n * Inherited by the HealthItem Class\n*/" },
 		{ "IncludePath", "Actors/BaseItem.h" },
 		{ "ModuleRelativePath", "Actors/BaseItem.h" },
+		{ "ToolTip", "BaseItem Class - This class is for the Item Actors. Playership is able to pick up Items which inherit from this class.\nInherited by BonusScoreItem Class\nInherited by the ExtraBoostItem Class\nInherited by the HealthItem Class" },
 	};
 #endif
 #if WITH_METADATA
@@ -199,14 +201,18 @@ void EmptyLinkFunctionForGeneratedCodeBaseItem() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseItem_Statics::NewProp_ItemEffect_MetaData[] = {
 		{ "Category", "Effects" },
+		{ "Comment", "//Particle Systems for the item effecxt\n" },
 		{ "ModuleRelativePath", "Actors/BaseItem.h" },
+		{ "ToolTip", "Particle Systems for the item effecxt" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseItem_Statics::NewProp_ItemEffect = { "ItemEffect", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseItem, ItemEffect), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseItem_Statics::NewProp_ItemEffect_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseItem_Statics::NewProp_ItemEffect_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseItem_Statics::NewProp_OnPickupSound_MetaData[] = {
 		{ "Category", "Effects" },
+		{ "Comment", "//Pick up sound\n" },
 		{ "ModuleRelativePath", "Actors/BaseItem.h" },
+		{ "ToolTip", "Pick up sound" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseItem_Statics::NewProp_OnPickupSound = { "OnPickupSound", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseItem, OnPickupSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseItem_Statics::NewProp_OnPickupSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseItem_Statics::NewProp_OnPickupSound_MetaData)) };
@@ -214,8 +220,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseItem() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseItem_Statics::NewProp_CapComp_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
+		{ "Comment", "//Base Item Components\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Actors/BaseItem.h" },
+		{ "ToolTip", "Base Item Components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseItem_Statics::NewProp_CapComp = { "CapComp", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseItem, CapComp), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseItem_Statics::NewProp_CapComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseItem_Statics::NewProp_CapComp_MetaData)) };
@@ -253,7 +261,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseItem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseItem, 4192109293);
+	IMPLEMENT_CLASS(ABaseItem, 956329024);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ABaseItem>()
 	{
 		return ABaseItem::StaticClass();

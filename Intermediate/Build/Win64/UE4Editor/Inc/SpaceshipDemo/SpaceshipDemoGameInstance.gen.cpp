@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USpaceshipDemoGameInstance_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * GameInstance class - To Save variable values across changing of levels. \n */" },
 		{ "IncludePath", "SpaceshipDemoGameInstance.h" },
 		{ "ModuleRelativePath", "SpaceshipDemoGameInstance.h" },
+		{ "ToolTip", "GameInstance class - To Save variable values across changing of levels." },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_USpaceshipDemoGameInstance_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceshipDemoGameInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USpaceshipDemoGameInstance, 4223264367);
+	IMPLEMENT_CLASS(USpaceshipDemoGameInstance, 3549225983);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<USpaceshipDemoGameInstance>()
 	{
 		return USpaceshipDemoGameInstance::StaticClass();

@@ -27,20 +27,17 @@ void AEnemyShip_Spawner::BeginPlay()
 // Called every frame
 void AEnemyShip_Spawner::Tick(float DeltaTime)
 {
-
 	Super::Tick(DeltaTime);
-
 }
-
 
 void AEnemyShip_Spawner::SpawnTrigger(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult) 
 {
-	
 	if(APlayerShip* PlayerShip = Cast<APlayerShip>(OtherActor))
 	{
 		SpawnLocation = FVector(GetActorLocation().X,0,0);
 		if(GameModeRef)
 		{
+			//Check if it's safe to spawn
 			if(GameModeRef->SpawnSafe())
 			{
 				for(int i =0; i<SpawnNum;i++)
@@ -50,5 +47,4 @@ void AEnemyShip_Spawner::SpawnTrigger(UPrimitiveComponent* OverlappedComponent, 
 			}
 		}
 	}
-	
 }

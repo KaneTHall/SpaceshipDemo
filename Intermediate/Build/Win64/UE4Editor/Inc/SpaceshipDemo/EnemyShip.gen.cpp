@@ -51,10 +51,11 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyShip_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * EnemyShip Class - Inherits from Baseclass\n * All EnemyShip specific member variables and functions used, declared and implemented here. \n */" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Pawns/EnemyShip.h" },
 		{ "ModuleRelativePath", "Pawns/EnemyShip.h" },
+		{ "ToolTip", "EnemyShip Class - Inherits from Baseclass\nAll EnemyShip specific member variables and functions used, declared and implemented here." },
 	};
 #endif
 #if WITH_METADATA
@@ -70,10 +71,10 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
-		{ "Comment", "//Components\n" },
+		{ "Comment", "//Enemy specific components\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Pawns/EnemyShip.h" },
-		{ "ToolTip", "Components" },
+		{ "ToolTip", "Enemy specific components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement = { "FloatingPawnMovement", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEnemyShip, FloatingPawnMovement), Z_Construct_UClass_UFloatingPawnMovement_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyShip_Statics::NewProp_FloatingPawnMovement_MetaData)) };
@@ -108,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShip, 1079176368);
+	IMPLEMENT_CLASS(AEnemyShip, 1232318631);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AEnemyShip>()
 	{
 		return AEnemyShip::StaticClass();

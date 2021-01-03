@@ -9,6 +9,10 @@
 class UBoxComponent;
 class ASpaceshipDemoGameModeBase;
 
+/**
+ * GoalWinCondition Class - Class for an object that triggers win condition upon overlap (A goal for the player to reach)
+ * 
+*/
 UCLASS()
 class SPACESHIPDEMO_API AGoalWinCondition : public AActor
 {

@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeBTService_HealthCritical() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTService_HealthCritical_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * UBTService_HealthCritical Class - Used to create a Blackboard Service that returns true when the AIOwner health is low\n * \n */" },
 		{ "IncludePath", "BTServiceAndTask/BTService_HealthCritical.h" },
 		{ "ModuleRelativePath", "BTServiceAndTask/BTService_HealthCritical.h" },
+		{ "ToolTip", "UBTService_HealthCritical Class - Used to create a Blackboard Service that returns true when the AIOwner health is low" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTService_HealthCritical_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeBTService_HealthCritical() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTService_HealthCritical, 4212785310);
+	IMPLEMENT_CLASS(UBTService_HealthCritical, 2014536090);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UBTService_HealthCritical>()
 	{
 		return UBTService_HealthCritical::StaticClass();

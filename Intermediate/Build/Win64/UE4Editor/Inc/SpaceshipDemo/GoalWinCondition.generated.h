@@ -16,18 +16,18 @@ struct FHitResult;
 #endif
 #define SPACESHIPDEMO_GoalWinCondition_generated_h
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_RPC_WRAPPERS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_SPARSE_DATA
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execGoal);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGoal);
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_INCLASS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGoalWinCondition(); \
 	friend struct Z_Construct_UClass_AGoalWinCondition_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(AGoalWinCondition)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_INCLASS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_INCLASS \
 private: \
 	static void StaticRegisterNativesAGoalWinCondition(); \
 	friend struct Z_Construct_UClass_AGoalWinCondition_Statics; \
@@ -45,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(AGoalWinCondition)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_STANDARD_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AGoalWinCondition(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGoalWinCondition) \
@@ -58,7 +58,7 @@ private: \
 public:
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_ENHANCED_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGoalWinCondition(AGoalWinCondition&&); \
@@ -69,31 +69,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AGoalWinCondition); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGoalWinCondition)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_PRIVATE_PROPERTY_OFFSET \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__BoxComp() { return STRUCT_OFFSET(AGoalWinCondition, BoxComp); }
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_12_PROLOG
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_GENERATED_BODY_LEGACY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_16_PROLOG
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_RPC_WRAPPERS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_INCLASS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_STANDARD_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_RPC_WRAPPERS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_INCLASS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_GENERATED_BODY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_INCLASS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_15_ENHANCED_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_INCLASS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_GoalWinCondition_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

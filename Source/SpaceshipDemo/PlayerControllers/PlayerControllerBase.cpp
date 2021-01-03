@@ -21,6 +21,7 @@ void APlayerControllerBase::SetPlayerEnabledState(bool SetPlayerEnabled)
 void APlayerControllerBase::BeginPlay() 
 {
     Super::BeginPlay();
+    //Display HUD
     HUD = CreateWidget(this, HUDClass);
     if(HUD!=nullptr)
 	{

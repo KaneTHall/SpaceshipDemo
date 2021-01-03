@@ -46,18 +46,19 @@ void EmptyLinkFunctionForGeneratedCodeAIPlayerController() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIPlayerController_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * PlayerController class for AI\n */" },
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "PlayerControllers/AIPlayerController.h" },
 		{ "ModuleRelativePath", "PlayerControllers/AIPlayerController.h" },
+		{ "ToolTip", "PlayerController class for AI" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAIPlayerController_Statics::NewProp_AIBehaviorTree_MetaData[] = {
 		{ "Category", "AIPlayerController" },
-		{ "Comment", "//float AcceptanceRadius = 200;\n" },
+		{ "Comment", "//float AcceptanceRadius = 200;\n//BehaviorTree assign in Editor\n" },
 		{ "ModuleRelativePath", "PlayerControllers/AIPlayerController.h" },
-		{ "ToolTip", "float AcceptanceRadius = 200;" },
+		{ "ToolTip", "float AcceptanceRadius = 200;\nBehaviorTree assign in Editor" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAIPlayerController_Statics::NewProp_AIBehaviorTree = { "AIBehaviorTree", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAIPlayerController, AIBehaviorTree), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAIPlayerController_Statics::NewProp_AIBehaviorTree_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAIPlayerController_Statics::NewProp_AIBehaviorTree_MetaData)) };
@@ -91,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeAIPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIPlayerController, 463155300);
+	IMPLEMENT_CLASS(AAIPlayerController, 1439247438);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AAIPlayerController>()
 	{
 		return AAIPlayerController::StaticClass();

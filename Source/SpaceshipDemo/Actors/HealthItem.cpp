@@ -2,14 +2,15 @@
 
 
 #include "HealthItem.h"
-#include "SpaceshipDemo/Components/Health.h"
 #include "Particles/ParticleSystem.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "SpaceshipDemo/Components/Health.h"
 #include "SpaceshipDemo/Pawns/PlayerShip.h"
 
 void AHealthItem::Effect(APlayerShip* PlayerShip) 
 {
     Super::Effect(PlayerShip);
+    //Call PlayerShip AddHealth() function using HealthIncrease
     PlayerShip->AddHealth(HealthIncrease);
     Destroy();
 

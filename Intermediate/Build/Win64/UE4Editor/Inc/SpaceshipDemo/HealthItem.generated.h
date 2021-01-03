@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SPACESHIPDEMO_HealthItem_generated_h
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_SPARSE_DATA
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_RPC_WRAPPERS
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_RPC_WRAPPERS_NO_PURE_DECLS
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_INCLASS_NO_PURE_DECLS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_SPARSE_DATA
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_RPC_WRAPPERS
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAHealthItem(); \
 	friend struct Z_Construct_UClass_AHealthItem_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AHealthItem)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_INCLASS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesAHealthItem(); \
 	friend struct Z_Construct_UClass_AHealthItem_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AHealthItem)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_STANDARD_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AHealthItem(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AHealthItem) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_ENHANCED_CONSTRUCTORS \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AHealthItem() { }; \
 private: \
@@ -60,31 +60,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AHealthItem); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AHealthItem)
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_PRIVATE_PROPERTY_OFFSET \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__HealthIncrease() { return STRUCT_OFFSET(AHealthItem, HealthIncrease); }
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_14_PROLOG
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_GENERATED_BODY_LEGACY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_15_PROLOG
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_RPC_WRAPPERS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_INCLASS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_STANDARD_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_RPC_WRAPPERS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_INCLASS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_GENERATED_BODY \
+#define SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_PRIVATE_PROPERTY_OFFSET \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_SPARSE_DATA \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_INCLASS_NO_PURE_DECLS \
-	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_17_ENHANCED_CONSTRUCTORS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_PRIVATE_PROPERTY_OFFSET \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_SPARSE_DATA \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_INCLASS_NO_PURE_DECLS \
+	SpaceshipDemo_Source_SpaceshipDemo_Actors_HealthItem_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

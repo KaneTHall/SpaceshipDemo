@@ -6,6 +6,8 @@
 
 void AExtraBoostItem::Effect(APlayerShip* PlayerShip) 
 {
+    Super::Effect(PlayerShip);
+    //Increase Number of boosts in PlayerShip
     PlayerShip->NoOfBoosts+=BoostNum;
 }
 

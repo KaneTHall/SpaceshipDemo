@@ -52,7 +52,9 @@ void EmptyLinkFunctionForGeneratedCodeHealthItem() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHealthItem_Statics::NewProp_HealthIncrease_MetaData[] = {
 		{ "Category", "Item Properties" },
+		{ "Comment", "//Health Increase - Adjust this value to determine how much health should be given to the player when the Health item is picked up\n" },
 		{ "ModuleRelativePath", "Actors/HealthItem.h" },
+		{ "ToolTip", "Health Increase - Adjust this value to determine how much health should be given to the player when the Health item is picked up" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AHealthItem_Statics::NewProp_HealthIncrease = { "HealthIncrease", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHealthItem, HealthIncrease), METADATA_PARAMS(Z_Construct_UClass_AHealthItem_Statics::NewProp_HealthIncrease_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHealthItem_Statics::NewProp_HealthIncrease_MetaData)) };
@@ -86,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeHealthItem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHealthItem, 3436620339);
+	IMPLEMENT_CLASS(AHealthItem, 781718715);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AHealthItem>()
 	{
 		return AHealthItem::StaticClass();

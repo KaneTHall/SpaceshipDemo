@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "ItemDrop.h"
 #include "SpaceshipDemo/Actors/BaseItem.h"
 #include "SpaceshipDemo/Actors/HealthItem.h"
@@ -12,8 +11,6 @@ UItemDrop::UItemDrop()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	
 }
 
 
@@ -21,8 +18,6 @@ UItemDrop::UItemDrop()
 void UItemDrop::BeginPlay()
 {
 	Super::BeginPlay();
-	// ...
-	
 }
 
 
@@ -30,25 +25,30 @@ void UItemDrop::BeginPlay()
 void UItemDrop::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
 
 
 void UItemDrop::OnComponentDestroyed(bool bDestroyingHierarchy) 
 {
 	Super::OnComponentDestroyed(bDestroyingHierarchy);
-	
-	UE_LOG(LogTemp, Error, TEXT("Current Location = %s"),*OwnerLocation.ToString());
+	/** DEBUG LINE
+	 * 	UE_LOG(LogTemp, Error, TEXT("Current Location = %s"),*OwnerLocation.ToString()); - Prints the Actors location this component is attached to.
+	 * 
+	*/
+	//Randomize the Itemselector value
 	ItemSelector = FMath::RandRange(0,5);
+	//Call Spawn Item function - Item Selector determines the item to spawn
 	SpawnItem(ItemSelector);
 }
 
 void UItemDrop::SpawnItem(int ItemSelect) 
 {
-	UE_LOG(LogTemp, Error, TEXT("Item Select = %i"),ItemSelect);
+	/** DEBUG LINE 
+	 * UE_LOG(LogTemp, Error, TEXT("Item Select = %i"),ItemSelect); - Prints the ItemSelect number.
+	*/
 	if(GetWorld())
 	{
+		//Switch statement the selects the case of Item to spawn.
 		switch (ItemSelect)
 		{
 			case 0:

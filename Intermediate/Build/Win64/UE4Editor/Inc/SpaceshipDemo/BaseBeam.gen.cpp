@@ -108,7 +108,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseBeam_OnHit_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Collision UFunction called when Beam hits another collider\n" },
 		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+		{ "ToolTip", "Collision UFunction called when Beam hits another collider" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseBeam_OnHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseBeam, nullptr, "OnHit", nullptr, nullptr, sizeof(BaseBeam_eventOnHit_Parms), Z_Construct_UFunction_ABaseBeam_OnHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseBeam_OnHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C40401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABaseBeam_OnHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseBeam_OnHit_Statics::Function_MetaDataParams)) };
@@ -173,12 +175,14 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SpaceshipDemo,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseBeam_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABaseBeam_OnHit, "OnHit" }, // 2440182612
+		{ &Z_Construct_UFunction_ABaseBeam_OnHit, "OnHit" }, // 270713283
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * Base Beam Class - Class for Beam Actor (Projectile) will be created when a ship calls the Shoot() function\n * All properties and member variables, functions involving the Beam class below.\n */" },
 		{ "IncludePath", "Actors/BaseBeam.h" },
 		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+		{ "ToolTip", "Base Beam Class - Class for Beam Actor (Projectile) will be created when a ship calls the Shoot() function\nAll properties and member variables, functions involving the Beam class below." },
 	};
 #endif
 #if WITH_METADATA
@@ -198,7 +202,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles_MetaData[] = {
 		{ "Category", "Effects" },
+		{ "Comment", "//Particle and Sound effects for beam\n" },
 		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+		{ "ToolTip", "Particle and Sound effects for beam" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles = { "OnHitParticles", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, OnHitParticles), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_OnHitParticles_MetaData)) };
@@ -206,7 +212,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_Damage_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Damage" },
+		{ "Comment", "//The ammount of damage the Beam applies when it hits a target. Adjust to change the damage\n" },
 		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+		{ "ToolTip", "The ammount of damage the Beam applies when it hits a target. Adjust to change the damage" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, Damage), METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_Damage_MetaData)) };
@@ -239,8 +247,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Components" },
+		{ "Comment", "//Beam component\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Actors/BaseBeam.h" },
+		{ "ToolTip", "Beam component" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement = { "BeamMovement", nullptr, (EPropertyFlags)0x004000000008001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABaseBeam, BeamMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseBeam_Statics::NewProp_BeamMovement_MetaData)) };
@@ -281,7 +291,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseBeam() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseBeam, 2713011102);
+	IMPLEMENT_CLASS(ABaseBeam, 359227086);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ABaseBeam>()
 	{
 		return ABaseBeam::StaticClass();

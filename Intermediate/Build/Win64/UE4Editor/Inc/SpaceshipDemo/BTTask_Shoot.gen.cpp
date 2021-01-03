@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_Shoot() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTTask_Shoot_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * Blackboard Task Node to call the Shoot function\n */" },
 		{ "IncludePath", "BTServiceAndTask/BTTask_Shoot.h" },
 		{ "ModuleRelativePath", "BTServiceAndTask/BTTask_Shoot.h" },
+		{ "ToolTip", "Blackboard Task Node to call the Shoot function" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTTask_Shoot_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_Shoot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTTask_Shoot, 2322343514);
+	IMPLEMENT_CLASS(UBTTask_Shoot, 2241952313);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UBTTask_Shoot>()
 	{
 		return UBTTask_Shoot::StaticClass();

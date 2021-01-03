@@ -154,8 +154,10 @@ void EmptyLinkFunctionForGeneratedCodeGoalWinCondition() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGoalWinCondition_Statics::Class_MetaDataParams[] = {
+		{ "Comment", "/**\n * GoalWinCondition Class - Class for an object that triggers win condition upon overlap (A goal for the player to reach)\n * \n*/" },
 		{ "IncludePath", "Actors/GoalWinCondition.h" },
 		{ "ModuleRelativePath", "Actors/GoalWinCondition.h" },
+		{ "ToolTip", "GoalWinCondition Class - Class for an object that triggers win condition upon overlap (A goal for the player to reach)" },
 	};
 #endif
 #if WITH_METADATA
@@ -197,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeGoalWinCondition() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGoalWinCondition, 3650449698);
+	IMPLEMENT_CLASS(AGoalWinCondition, 3269573061);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AGoalWinCondition>()
 	{
 		return AGoalWinCondition::StaticClass();

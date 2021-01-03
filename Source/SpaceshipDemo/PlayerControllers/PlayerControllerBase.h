@@ -7,7 +7,8 @@
 #include "PlayerControllerBase.generated.h"
 
 /**
- * 
+ * PlayerController Class
+ * Setup the HUD
  */
 UCLASS()
 class SPACESHIPDEMO_API APlayerControllerBase : public APlayerController
@@ -15,10 +16,9 @@ class SPACESHIPDEMO_API APlayerControllerBase : public APlayerController
 	GENERATED_BODY()
 	
 	private:
-
+	//UserWidget assign in HUD
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class UUserWidget> HUDClass;
-
 	UPROPERTY(EditAnywhere)
 	UUserWidget* HUD;
 

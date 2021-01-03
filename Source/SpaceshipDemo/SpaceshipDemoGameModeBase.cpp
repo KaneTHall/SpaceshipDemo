@@ -12,10 +12,9 @@
 #include "SpaceshipDemo/Pawns/Asteroid.h"
 #include "SpaceshipDemo/Pawns/SpaceGate.h"
 
-
-
 void ASpaceshipDemoGameModeBase::ActorHasDied(AActor* DeadActor) 
 {
+    //Checks if Player is the dead actor
     if(APlayerShip* PlayerShip = Cast<APlayerShip>(DeadActor))
     {
         PlayerShip->Destroyed();
@@ -23,6 +22,7 @@ void ASpaceshipDemoGameModeBase::ActorHasDied(AActor* DeadActor)
         if(PlayerControllerRef)
         {
             //PlayerControllerRef->SetPlayerEnabledState(false);
+            //Restart if Lives!=0
             if(PlayerShip->Lives>1)
             {
                 PlayerShip->Lives -= 1;
@@ -30,16 +30,15 @@ void ASpaceshipDemoGameModeBase::ActorHasDied(AActor* DeadActor)
                 UE_LOG(LogTemp, Warning, TEXT("%i Number of lives remaining"),GameInstanceRef->UpdatedLives);
                 Restart();
             }
+            //If Lives are 0 then set Lives back to 3 and GameOver
             else
             {
                 GameInstanceRef->UpdatedLives = 3;
                 GameOver();
             }
-            
-
         }
-        
     }
+    //If Player is not dead but another actor then assign score for each dead actor
     else if(AEnemyShip* DeadEnemyShip = Cast<AEnemyShip>(DeadActor))
     {
         SetScore(25);
@@ -82,6 +81,7 @@ void ASpaceshipDemoGameModeBase::Restart()
     UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
 }
 
+//Checks all EnemyShips in world, returns false if too many.
 bool ASpaceshipDemoGameModeBase::SpawnSafe() 
 {
     int Count = 0;

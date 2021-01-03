@@ -7,7 +7,7 @@
 #include "BTTask_Shoot.generated.h"
 
 /**
- * 
+ * Blackboard Task Node to call the Shoot function
  */
 UCLASS()
 class SPACESHIPDEMO_API UBTTask_Shoot : public UBTTaskNode
@@ -17,8 +17,10 @@ class SPACESHIPDEMO_API UBTTask_Shoot : public UBTTaskNode
 	private:
 
 	public:
+	// Constructor
 	UBTTask_Shoot();
 
 	protected:
+	// Called every tick
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 };

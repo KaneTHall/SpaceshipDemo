@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeBTService_UpdatePlayerLocation() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTService_UpdatePlayerLocation_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * UBTService_UpdatePlayerLocation Class - Used to create a Blackboard Service that updates every tick where the player is.\n */" },
 		{ "IncludePath", "BTServiceAndTask/BTService_UpdatePlayerLocation.h" },
 		{ "ModuleRelativePath", "BTServiceAndTask/BTService_UpdatePlayerLocation.h" },
+		{ "ToolTip", "UBTService_UpdatePlayerLocation Class - Used to create a Blackboard Service that updates every tick where the player is." },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTService_UpdatePlayerLocation_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeBTService_UpdatePlayerLocation() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTService_UpdatePlayerLocation, 4142920897);
+	IMPLEMENT_CLASS(UBTService_UpdatePlayerLocation, 586789933);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<UBTService_UpdatePlayerLocation>()
 	{
 		return UBTService_UpdatePlayerLocation::StaticClass();

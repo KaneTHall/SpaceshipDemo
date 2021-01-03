@@ -15,6 +15,7 @@ ASpaceGate::ASpaceGate()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	//Createing the SpaceGate Component hierarchy
 	SceneComp = CreateDefaultSubobject<USceneComponent>(TEXT("Scene Component"));
 	RootComponent = SceneComp;
 	SpaceGateMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Space Gate Mesh"));
@@ -47,14 +48,16 @@ void ASpaceGate::Tick(float DeltaTime)
 void ASpaceGate::Destroyed() 
 {
 	Super::Destroyed();
+	//Play Destroyed sound and deactivate gate particles. 
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(),OnDestroyedParticles, RootComponent->GetComponentLocation());
 	UGameplayStatics::PlaySoundAtLocation(GetWorld(),OnDestroyedSound, RootComponent->GetComponentLocation());
 	PSC->KillParticlesForced();
+	//Destroy Box collision component so Players can fly through.
 	BoxComp->DestroyComponent();
 }
 
 
-
+//Collision function
 void ASpaceGate::ActiveGate(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit) 
 {
 	if(ABaseBeam* Beam = Cast<ABaseBeam>(OtherActor))

@@ -52,7 +52,9 @@ void EmptyLinkFunctionForGeneratedCodeBonusScoreItem() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABonusScoreItem_Statics::NewProp_ScoreBonus_MetaData[] = {
 		{ "Category", "Item Properties" },
+		{ "Comment", "//ScoreBonus - The amount of score boost to apply when the item is picked up\n" },
 		{ "ModuleRelativePath", "Actors/BonusScoreItem.h" },
+		{ "ToolTip", "ScoreBonus - The amount of score boost to apply when the item is picked up" },
 	};
 #endif
 	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ABonusScoreItem_Statics::NewProp_ScoreBonus = { "ScoreBonus", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABonusScoreItem, ScoreBonus), METADATA_PARAMS(Z_Construct_UClass_ABonusScoreItem_Statics::NewProp_ScoreBonus_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABonusScoreItem_Statics::NewProp_ScoreBonus_MetaData)) };
@@ -86,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeBonusScoreItem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABonusScoreItem, 3864607801);
+	IMPLEMENT_CLASS(ABonusScoreItem, 1116336629);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ABonusScoreItem>()
 	{
 		return ABonusScoreItem::StaticClass();

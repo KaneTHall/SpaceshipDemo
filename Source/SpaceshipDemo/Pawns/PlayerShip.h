@@ -72,8 +72,8 @@ class SPACESHIPDEMO_API APlayerShip : public ABaseShip
 	/** Barrel Roll Functions
 	 *  BarrelRollRight() Called when 'E' is pressed. Player ship rolls Right
 	 *  BarrelRollLeft() Called when 'Q' is presed. Player ship rolls to Left						*/
-	virtual void BarrelRollRight() override;
-	virtual void BarrelRollLeft() override;
+	void BarrelRollRight() override;
+	void BarrelRollLeft() override;
 	//TimerHandle to handle time based events. 
 	FTimerHandle TimerHandle;
 	// Boost function - Called when 'Space Bar' is pressed - 

@@ -16,7 +16,7 @@ class ABaseBeam;
  *  Inherited by the Enemy Ships 
  *  Class holds each pawns shared functions and variables
 */
-UCLASS()
+UCLASS(abstract)
 class SPACESHIPDEMO_API ABaseShip : public APawn
 {
 	GENERATED_BODY()

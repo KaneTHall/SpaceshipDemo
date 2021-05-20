@@ -35,7 +35,7 @@ private: \
 	static void StaticRegisterNativesABaseShip(); \
 	friend struct Z_Construct_UClass_ABaseShip_Statics; \
 public: \
-	DECLARE_CLASS(ABaseShip, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/SpaceshipDemo"), NO_API) \
+	DECLARE_CLASS(ABaseShip, APawn, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/SpaceshipDemo"), NO_API) \
 	DECLARE_SERIALIZER(ABaseShip)
 
 
@@ -44,7 +44,7 @@ private: \
 	static void StaticRegisterNativesABaseShip(); \
 	friend struct Z_Construct_UClass_ABaseShip_Statics; \
 public: \
-	DECLARE_CLASS(ABaseShip, APawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/SpaceshipDemo"), NO_API) \
+	DECLARE_CLASS(ABaseShip, APawn, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/SpaceshipDemo"), NO_API) \
 	DECLARE_SERIALIZER(ABaseShip)
 
 

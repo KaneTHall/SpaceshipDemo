@@ -109,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeTurretShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ATurretShip, 627206432);
+	IMPLEMENT_CLASS(ATurretShip, 3762298823);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ATurretShip>()
 	{
 		return ATurretShip::StaticClass();

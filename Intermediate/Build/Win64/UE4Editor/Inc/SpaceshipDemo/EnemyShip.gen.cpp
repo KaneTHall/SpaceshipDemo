@@ -109,7 +109,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEnemyShip, 1232318631);
+	IMPLEMENT_CLASS(AEnemyShip, 4157264825);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<AEnemyShip>()
 	{
 		return AEnemyShip::StaticClass();

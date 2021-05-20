@@ -384,7 +384,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::PropPointers),
 		0,
-		0x009000A4u,
+		0x009000A5u,
 		METADATA_PARAMS(Z_Construct_UClass_ABaseShip_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ABaseShip_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_ABaseShip()
@@ -396,7 +396,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseShip() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABaseShip, 543883586);
+	IMPLEMENT_CLASS(ABaseShip, 1444878522);
 	template<> SPACESHIPDEMO_API UClass* StaticClass<ABaseShip>()
 	{
 		return ABaseShip::StaticClass();
